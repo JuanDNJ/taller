@@ -1,5 +1,3 @@
-const ROOT_LAYOUT = "#root";
+const ROOT_LAYOUT = '#root'
 
-export {
-    ROOT_LAYOUT
-}
+export { ROOT_LAYOUT }

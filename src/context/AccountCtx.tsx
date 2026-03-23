@@ -1,11 +1,10 @@
-import type { User } from "firebase/auth";
-import { createContext } from "react";
+import type { User } from 'firebase/auth'
+import { createContext } from 'react'
 
 interface AccountCtxType {
-  user: User | null;
+  user: User | null
 }
 
-const AccountCtx = createContext<AccountCtxType>({ user: null });
+const AccountCtx = createContext<AccountCtxType>({ user: null })
 
-
-export default AccountCtx;
+export default AccountCtx

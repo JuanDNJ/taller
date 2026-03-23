@@ -1,9 +1,7 @@
-import { signInWithGoogle } from "../services/account"
+import { signInWithGoogle } from '../services/account'
 
 const SignInWithGoogle = () => {
-  return (
-    <button onClick={signInWithGoogle}>SignIn Google</button>
-  )
-}   
+  return <button onClick={signInWithGoogle}>SignIn Google</button>
+}
 
-export default SignInWithGoogle;
+export default SignInWithGoogle

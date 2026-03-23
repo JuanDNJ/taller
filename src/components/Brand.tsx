@@ -1,15 +1,16 @@
-import type { FC } from "react";
-import { NavLink } from "react-router";
+import type { FC } from 'react'
+import { NavLink } from 'react-router'
 
 type BrandProps = {
-    label: string;
+  label: string
 }
 
 const Brand: FC<BrandProps> = ({ label }) => {
-    return (
-        <NavLink to="/" className="hover:underline text-xl sm:text-2xl font-bold text-white px-4">
-            {label}
-        </NavLink>);
+  return (
+    <NavLink to="/" className="hover:underline text-xl sm:text-2xl font-bold text-white px-4">
+      {label}
+    </NavLink>
+  )
 }
 
-export default Brand;
+export default Brand
