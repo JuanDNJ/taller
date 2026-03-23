@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { useState, type FC } from 'react'
 import TitlePage from '../components/TitlePage'
 import { NavLink } from 'react-router'
 import { BsArrowRight } from 'react-icons/bs'
@@ -8,11 +8,13 @@ import heroImage from '../assets/images/hero.png'
 import engineRepair from '../assets/images/engine_repair.png'
 import generalMaintenance from '../assets/images/general_maintenance.png'
 import mp4Frenos from '../assets/Generación_de_Video_Sistema_de_Frenos.mp4'
-import avatarUno from '../assets/images/avatar1.png'
-import avatarTres from '../assets/images/avatar3.png'
-import avatarCuatro from '../assets/images/avatar4.png'
+import CustomerReview from '../components/CustomerReview'
+import { CoustomersReviews, type CustomerReviewProps } from '../mook'
 
 const App: FC = () => {
+
+  const [customersReviews] = useState<CustomerReviewProps[]>(CoustomersReviews)
+
   return (
     <main>
       {/* Hero */}
@@ -22,8 +24,8 @@ const App: FC = () => {
           className="absolute top-0 left-0 w-full h-full object-cover"
           alt="image description"
         />
-        <article className="lg:bg-black/50 rounded-lg xl:pb-12 lg:pb-12 absolute max-w-full -top-10 left-0 sm:max-w-[66vw] sm:left-16 sm::top-4 md:max-w-[62vw] lg:max-w-[45vw] lg:top-8 xl:max-w-[40vw] xl:top-16 xl:left-50 flex flex-col pt-12">
-          <TitlePage label="Taller Juan Valdivia, cuidado experto para tu vehículo" />
+        <article className="lg:bg-black/50 rounded-lg xl:pb-12 lg:pb-12 absolute max-w-full -top-10 left-0 sm:max-w-[66vw] sm:left-16 sm::top-4 md:max-w-[62vw] lg:max-w-[45vw] lg:top-8 s xl:top-16 xl:left-50 flex flex-col pt-12">
+          <TitlePage label="Taller Cloe, cuidado experto para tu vehículo" />
           <section className="mt-8">
             <p className="text-lg text-white px-4">
               Donde la fuerza industrial se une a la precisión de la ingeniería. Tratamos cada
@@ -137,50 +139,16 @@ const App: FC = () => {
               puedas conducir con confianza y seguridad.
             </p>
           </div>
-          <div className="bg-gray-950 rounded-lg p-4">
-            <section className="grid grid-flow-col relative  items-center gap-4">
-              <div className="group absolute left-0 z-1 flex items-center gap-2 cursor-pointer">
-                <img
-                  src={avatarUno}
-                  alt="avatar"
-                  width={32}
-                  height={32}
-                  className="group-hover:-translate-y-1 peer rounded-full w-12 h-12 object-cover object-center bg-cyan-300 border-3 border-white transition-transform duration-300"
-                />
-                <blockquote className="mb-4 hidden w-92 peer-hover:inline peer-hover:absolute peer-hover:bottom-full peer-hover:left-4 text-xs p-2 border border-yellow-500 text-white rounded-lg bg-black">
-                  "Gracias al taller Juan Valdivia, pasé la ITV sin ningún problema. Su atención al
-                  detalle y profesionalismo son excepcionales. ¡Recomiendo sus servicios a todos los
-                  conductores!"
-                </blockquote>
-              </div>
-              <div className="group absolute left-7 z-2 flex items-center gap-2 cursor-pointer">
-                <img
-                  src={avatarTres}
-                  alt="avatar"
-                  width={32}
-                  height={32}
-                  className="group-hover:-translate-y-1 peer rounded-full w-12 h-12 object-cover object-center bg-cyan-300 border-3 border-white transition-transform duration-300"
-                />
-                <blockquote className="mb-5 hidden w-92 peer-hover:inline peer-hover:absolute peer-hover:bottom-full peer-hover:left-4 text-xs p-2 border border-yellow-500 text-white rounded-lg bg-black">
-                  "Excelente servicio y atención al cliente. Mi coche pasó la ITV sin problemas
-                  gracias a su profesionalismo."
-                </blockquote>
-              </div>
-              <div className="group absolute left-14 z-3 flex items-center gap-2 relative cursor-pointer">
-                <img
-                  src={avatarCuatro}
-                  alt="avatar"
-                  width={32}
-                  height={32}
-                  className="group-hover:-translate-y-1 peer rounded-full w-12 h-12 object-cover object-center bg-cyan-300 border-3 border-white transition-transform duration-300"
-                />
-                <blockquote className="mb-6 hidden w-92 peer-hover:inline peer-hover:absolute peer-hover:bottom-full peer-hover:left-4 text-xs p-2 border border-yellow-500 text-white rounded-lg bg-black">
-                  "El taller Juan Valdivia me ayudó a preparar mi coche para la ITV y el proceso fue
-                  muy fácil. Su equipo es muy profesional y se nota que saben lo que hacen."
-                </blockquote>
-              </div>
-              <span className="mb-2 text-center">Lo que dicen nuestros clientes</span>
+          <div className="w-full lg:max-w-md bg-gray-950 rounded-lg p-4 flex gap-8 relative">
+            <section className="min-w-26 flex items-center gap-4">
+              {customersReviews.map((review, index) => (
+                <CustomerReview key={index} {...review}/>
+              ))}
+            
             </section>
+            <div className='flex items-center'>
+              <span className="xxs:text-xs xs:text-sm sm:text-lg md:text-xl">Lo que dicen nuestros clientes</span>
+            </div>
           </div>
         </article>
         <article className="mt-8 px-4">

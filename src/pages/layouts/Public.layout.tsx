@@ -17,7 +17,7 @@ const PublicLayout: FC<PublicLayoutProps> = () => {
       <footer className="flex flex-col bg-gray-900 py-8">
         <article className="mt-8 px-4 flex flex-wrap lg:flex-row lg:gap-8">
           <header className="mb-4 flex flex-col items-center w-full ">
-            <h2 className="text-2xl font-bold mb-4 text-white">Taller Juan Valdivia</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white">Taller Cloe</h2>
             <hr className="border-b-4 border-cyan-500 mb-4 w-full max-w-96 rounded" />
           </header>
           <section className="my-8 flex justify-evenly w-full flex-col md:flex-row">
@@ -75,7 +75,7 @@ const PublicLayout: FC<PublicLayoutProps> = () => {
                 <hr className="border-b-2 border-yellow-500 mb-4 rounded" />
               </header>
               <iframe
-                className="rounded-lg w-8 h-64 lg:w-96 lg:h-62"
+                className="rounded-lg xxs:w-full xxs:h-64 md:w-96 md:h-64"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1780.9473595155355!2d2.039640220360484!3d41.34834331717986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49b8b8cd98a33%3A0x50075b189548e24f!2sAyuntamiento%20de%20Sant%20Boi%20de%20Llobregat!5e0!3m2!1ses!2ses!4v1774173660556!5m2!1ses!2ses"
                 allowFullScreen={true}
                 loading="lazy"

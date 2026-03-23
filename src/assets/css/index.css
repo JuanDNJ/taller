@@ -36,6 +36,10 @@
   --color-mint-500: rgba(255, 255, 255, 1);
   --color-header: var(--bg-header);
   --color-menu-mobile: var(--bg-header);
+
+/* breakpoints */
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 425px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
