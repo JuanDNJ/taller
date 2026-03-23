@@ -138,7 +138,7 @@ const App: FC = () => {
             </p>
           </div>
           <div className="bg-gray-950 rounded-lg p-4">
-            <section className="grid grid-flow-col relative w-sm items-center gap-4">
+            <section className="grid grid-flow-col relative  items-center gap-4">
               <div className="group absolute left-0 z-1 flex items-center gap-2 cursor-pointer">
                 <img
                   src={avatarUno}
