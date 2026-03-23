@@ -1,5 +1,4 @@
 import { useState, type FC } from 'react'
-import TitlePage from '../components/TitlePage'
 import { NavLink } from 'react-router'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaTools } from 'react-icons/fa'
@@ -10,6 +9,9 @@ import generalMaintenance from '../assets/images/general_maintenance.png'
 import mp4Frenos from '../assets/Generación_de_Video_Sistema_de_Frenos.mp4'
 import CustomerReview from '../components/CustomerReview'
 import { CoustomersReviews, type CustomerReviewProps } from '../mook'
+import Hero from '../components/Hero'
+import Aside from '../components/Aside'
+import Title from '../components/Title'
 
 const App: FC = () => {
 
@@ -18,36 +20,16 @@ const App: FC = () => {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[62svh] sm:min-h-[55svh] md:min-h-[65svh]">
-        <img
-          srcSet={`${heroImage} 1x, ${heroImage} 2x`}
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          alt="image description"
-        />
-        <article className="lg:bg-black/50 rounded-lg xl:pb-12 lg:pb-12 absolute max-w-full -top-10 left-0 sm:max-w-[66vw] sm:left-16 sm::top-4 md:max-w-[62vw] lg:max-w-[45vw] lg:top-8 s xl:top-16 xl:left-50 flex flex-col pt-12">
-          <TitlePage label="Taller Cloe, cuidado experto para tu vehículo" />
-          <section className="mt-8">
-            <p className="text-lg text-white px-4">
-              Donde la fuerza industrial se une a la precisión de la ingeniería. Tratamos cada
-              vehículo como una obra maestra de la mecánica y brindamos atención especializada que
-              supera los estándares de fábrica.
-            </p>
-            <footer className="mt-8 px-4 md:px-8 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 md:justify-end">
-              <button className="px-4 py-2 bg-yellow-500 text-black font-bold rounded">
-                Contáctanos
-              </button>
-              <button className="px-4 py-2 bg-gray-500 text-white font-bold rounded">
-                Ver tu proceso
-              </button>
-            </footer>
-          </section>
-        </article>
-      </section>
+      <Hero img={{
+        src: heroImage,
+        srcSet: `${heroImage} 1x, ${heroImage} 2x`,
+        alt: 'Imagen de un taller mecánico con un coche en el elevador y un mecánico trabajando en él'
+      }} label="Taller Cloe, cuidado experto para tu vehículo" description="Donde la fuerza industrial se une a la precisión de la ingeniería. Tratamos cada vehículo como una obra maestra de la mecánica y brindamos atención especializada que supera los estándares de fábrica." />
       {/* Servicios */}
-      <section className="max-w-7xl mx-auto my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4">
-        <article className="mt-8 px-4 col-span-2">
-          <h2 className="text-2xl font-bold text-white">Nuestros Servicios</h2>
-        </article>
+      <section className="max-w-7xl mx-auto my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4 px-4">
+        <Aside>
+          <Title label="Nuestros Servicios" tag="h2" />
+        </Aside>
         <article className="flex flex-col lg:flex-row justify-between gap-4 col-span-2">
           <section className="lg:mt-8 w-full relative bg-black/50">
             <img

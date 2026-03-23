@@ -1,8 +1,8 @@
 import type { FC } from 'react'
-import Brand from './Brand'
-import CurrentUser from './CurrentUser'
-import MenuMobile from './MenuMobile'
-import MenuDesktop from './MenuDesktop'
+import Brand from '../../components/Brand'
+import CurrentUser from '../../components/CurrentUser'
+import MenuMobile from '../../components/MenuMobile'
+import MenuDesktop from '../../components/MenuDesktop'
 
 const Header: FC = () => {
   return (
