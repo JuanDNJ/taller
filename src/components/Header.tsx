@@ -8,7 +8,7 @@ const Header: FC = () => {
   return (
     <header className="flex justify-between bg-header relative sticky top-0 z-50">
       <section className="hidden lg:flex items-center">
-        <Brand label="Juan Valdivia" />
+        <Brand label="Taller JV" />
       </section>
       <MenuMobile />
       <MenuDesktop />

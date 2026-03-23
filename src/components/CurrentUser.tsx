@@ -9,7 +9,7 @@ const CurrentUser = () => {
   const { user } = useAccount()
   const [isOpenUserMenu, setIsOpenUserMenu] = useState<boolean>(false)
   return (
-    <section className="relative flex gap-4 items-center justify-between rounded-md py-1 px-2 my-1 mr-4">
+    <section className="relative flex gap-4 items-center justify-between rounded-md py-1  my-1 lg:mr-4">
       {user ? (
         <>
           <header

@@ -1,4 +1,5 @@
-import { FcMenu } from 'react-icons/fc'
+import { FaBars } from "react-icons/fa";
+
 import Menu from './Menu'
 import { useState, type FC } from 'react'
 
@@ -11,9 +12,9 @@ const MenuMobile: FC<MenuResponsiveProps> = () => {
   }
   return (
     <section className="flex lg:hidden items-center ">
-      <FcMenu className="ml-4 text-2xl cursor-pointer" onClick={toggleMenu} />
+      <FaBars className="text-white ml-4 text-2xl cursor-pointer" onClick={toggleMenu} />
       <nav
-        className={`flex lg:hidden  bg-menu-mobile z-100 ${isOpen ? 'absolute top-0 left-0 right-0' : 'hidden'}`}
+        className={`flex lg:hidden bg-menu-mobile z-100 ${isOpen ? 'absolute top-0 left-0 right-0' : 'hidden'}`}
       >
         <Menu variant="mobile" onClick={() => setIsOpen(false)} />
       </nav>
