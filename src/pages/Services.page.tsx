@@ -8,40 +8,42 @@ import generalMaintenance from '../assets/images/general_maintenance.png'
 import mp4Frenos from '../assets/Generación_de_Video_Sistema_de_Frenos.mp4'
 import Aside from '../components/Aside'
 import Title from '../components/Title'
-import Image from '../components/Image'
-import P from '../components/P'
+import { SERVICE_MOOK } from '@/config'
 
 const ServicesPage: FC = () => {
   return (
-    <main>
-      <section className="max-w-7xl mx-auto my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4 px-4">
+    <main className='bg-main'>
+         <section className="max-w-7xl mx-auto my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4 px-4">
         <Aside>
-          <Title label="Nuestros Servicios" tag="h1" size="xl" />
+          <Title label={SERVICE_MOOK.title} tag="h2" />
         </Aside>
         <article className="flex flex-col lg:flex-row justify-between gap-4 col-span-2">
           <section className="lg:mt-8 w-full relative bg-black/50">
-          <Image srcSet={`${generalMaintenance} 1x, ${generalMaintenance} 2x`} alt="image description" className="w-full h-auto lg:h-96 object-cover aspect-video lg:rounded-lg" />
+            <img
+              srcSet={`${generalMaintenance} 1x, ${generalMaintenance} 2x`}
+              className="w-full h-auto lg:h-96 object-cover aspect-video lg:rounded-lg"
+              alt="image description"
+            />
             <article className="absolute top-0 left-0 flex flex-col gap-2 justify-center h-full w-full px-4 lg:px-20 bg-black/50">
               <div className="flex flex-col lg:mb-12">
-                <div className="flex items-center gap-4 mb-4">
-                  <i className="hidden lg:inline text-yellow-500">
-                    <FaTools size={48} className="text-yellow-500" />
-                  </i>
-                  <i className="lg:hidden text-yellow-500">
-                    <FaTools size={24} className="text-yellow-500" />
-                  </i>
-                  <Title label="Mantenimiento general" tag="h2" size="lg" />
-                </div>
-                <P>
-                  Cuidado preventivo diseñado para mantener su máquina funcionando al máximo
-                  rendimiento mediante rigurosas inspecciones multipunto.
-                </P>
+                <h2 className="text-2xl lg:text-4xl my-2 font-bold text-white">
+                  {SERVICE_MOOK.maintenance.label}
+                </h2>
+                <i className="hidden lg:inline absolute lg:top-4 lg:left-20 text-yellow-500">
+                  <FaTools size={48} className="text-yellow-500" />
+                </i>
+                <i className="absolute lg:hidden top-1 left-4 text-yellow-500">
+                  <FaTools size={24} className="text-yellow-500" />
+                </i>
+                <p className="text-white max-w-96 lg:text-xl">
+                  {SERVICE_MOOK.maintenance.description}
+                </p>
               </div>
               <NavLink
                 to={'plans'}
                 className="group lg:text-lg hover:text-orange-400 inline-flex items-center gap-4 text-orange-200 lg:mt-2"
               >
-                Explorar los planes de mantenimiento{' '}
+                Explorar los planes de mantenimiento
                 <BsArrowRight size={24} className="group-hover:text-blue-400" />
               </NavLink>
             </article>
@@ -51,10 +53,10 @@ const ServicesPage: FC = () => {
             <article className="flex flex-col gap-4">
               <video className="w-full max-h-72" src={mp4Frenos} controls></video>
               <div className="flex flex-col gap-2 bg-black/50 p-4">
-                <Title label="Sistemas de frenos" tag="h2" size="md" />
-                <P>
-                  Soluciones de potencia de frenado de alto rendimiento y calibración de seguridad.
-                </P>
+                <h3 className="text-xl lg:text-2xl font-bold text-white">{SERVICE_MOOK.brakes.label}</h3>
+                <p className="text-white">
+                  {SERVICE_MOOK.brakes.description}
+                </p>
               </div>
             </article>
           </section>
@@ -62,23 +64,24 @@ const ServicesPage: FC = () => {
         <article className="flex flex-col lg:flex-row gap-4 col-span-2">
           <section className="px-4 bg-gray-800 flex items-center lg:rounded-lg lg:px-14">
             <div className="flex flex-col gap-4 py-8">
-              <Title label="Diagnóstico avanzado" tag="h2" size="lg" />
-              <P>
-                Precisión milimétrica utilizando la última tecnología de escaneo y telemetría
-                digital.
-              </P>
+              <h2 className="text-xl lg:text-4xl font-bold mb-4 text-white">
+                {SERVICE_MOOK.diagnostics.label}
+              </h2>
+              <p className="text-white lg:text-xl">
+                {SERVICE_MOOK.diagnostics.description}
+              </p>
             </div>
           </section>
           <section className="flex flex-col lg:flex-row items-center lg:px-14 gap-8 lg:gap-16 bg-gray-800 min-h-80 lg:rounded-lg">
             <article className="w-full flex flex-col justify-center gap-4 p-4">
-              <Title label="Reparación de motores" tag="h2" size="lg" />
-              <P>
-                Reconstrucciones completas y restauración de componentes utilizando piezas con
-                especificaciones OEM y experiencia de un técnico maestro.
-              </P>
-              
+              <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white">
+                {SERVICE_MOOK.engine_repair.label}
+              </h2>
+              <p className="text-white lg:text-xl">
+                {SERVICE_MOOK.engine_repair.description}
+              </p>
             </article>
-            <Image
+            <img
               srcSet={`${engineRepair} 1x, ${engineRepair} 2x`}
               className="lg:w-40 lg:h-40 object-cover lg:rounded-lg"
               alt="image description"

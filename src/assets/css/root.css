@@ -1,48 +1,55 @@
 @import 'tailwindcss';
 
 :root {
-    --bg: #ffffff;
-    --bg-header: #ffffff;
-    --bg-footer: #034377;
-    --text: #2e2e2e;
+    --primary-color: #E8B100;
+    --secondary-color: #ececec;
+    --tertiary-color: #13495F;
+    --cuaternary-color: #0E0707;
+    --black: #131313;
+
+    --dark-color: #343434;
+    --light-color: #fffffb;
+
+    --bg: var(--secondary-color);
+    --bg-header: var(--light-color);
+    --bg-footer: rgb(19, 73, 95);
+
+    --text: var(--black);
     --brand: rgb(42, 179, 233);
-    --link: #444444;
-    --paragraph: var(--text);
+    --link: #666666;
+    --paragraph: var(--black);
     --title: rgb(42, 179, 233);
-    --bg-form: #343434;
-    --bg-input: #e9e2e2;
-    --text-input: #333333;
+
+    --bg-form: var(--dark-color);
+    --bg-input: var(--light-color);
+    --text-input: var(--dark-color);
+
     --info: #f6fca2;
     --warning: #fcb98c;
     --menu-bars: #383838;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    --outline: #50f0c8;
 
     @media (max-width: 1024px) {
         font-size: 16px;
     }
-
-
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #0e0707;
-        --bg-header: #2e2e2e;
-        --bg-footer: rgb(19, 73, 95);
-        --text: #ffffff;
-        --brand: #ffffff;
-        --link: #e6e6e6;
-        --paragraph: var(--text);
-        --title: #F0B100;
-        --bg-form: #e9e2e2;
-        --bg-input: #343434;
-        --text-input: #ffffff;
-        --info: #f0fc49;
-        --warning: #ff9f9c;
-        --menu-bars: #ffffff;
+        --bg: var(--dark-color);
+        --bg-header: var(--black);
+        --text: var(--light-color);
+        --link: var(--light-color);
+        --paragraph: var(--light-color);
+        --title: var(--primary-color);
+        --bg-form: var(--light-color);
+        --bg-input: var(--dark-color);
+        --text-input: var(--light-color);
+        --info: var(--info);
+        --warning: var(--warning);
+        --menu-bars: var(--light-color);
+        --outline: var(--light-color);
+          --brand: rgb(42, 179, 233);
     }
 }
 
@@ -51,10 +58,10 @@
     --color-header: var(--bg-header);
     --color-footer: var(--bg-footer);
     --color-color-base: var(--text);
-    --color-brand: var(--brand);
+    --color-brand: rgb(42, 179, 233);
     --color-link: var(--link);
     --color-form: var(--bg-form);
-    --color-paragraph: var(--paragraph);
+    --color-paragraph: var(--text);
     --color-title: var(--title);
     --color-placeholder: var(--text);
     --color-input-bg: var(--bg-input);
@@ -62,7 +69,18 @@
     --color-info: var(--info);
     --color-warning: var(--warning);
     --color-menu-bars: var(--menu-bars);
+    --color-outline: var(--outline);
+    --font-body: 'Lucida Grande', 'Trebuchet MS', 'Lucida Sans Unicode',  'Lucida Sans', Arial, sans-serif;
+    --color-primary: var(--primary-color);
+    --color-secondary: var(--secondary-color);
+    --color-tertiary: var(--tertiary-color);
+    --color-cuaternary: var(--cuaternary-color);
     /* breakpoints */
     --breakpoint-xxs: 320px;
     --breakpoint-xs: 425px;
+
+    /* font sizes */
+    --text-xxs: 0.7rem;
+    --text-xxs--line-height: calc(1 / 0.7);
+
 }

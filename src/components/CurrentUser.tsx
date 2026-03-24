@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { useAccount } from '../context/hooks/useAccount'
 import Avatar from './Avatar'
 import LogOutOfGoogle from './LogOutOfGoogle'
-import SignInWithGoogle from './SignInWithGoogle'
+// import SignInWithGoogle from './SignInWithGoogle'
 import { NavLink } from 'react-router'
+import Btn from './Btn'
 
 const CurrentUser = () => {
   const { user } = useAccount()
@@ -36,7 +37,12 @@ const CurrentUser = () => {
           )}
         </>
       ) : (
-        <SignInWithGoogle />
+       <>
+        {/* <SignInWithGoogle />  */}
+        <Btn variant='login' className='border-primary bg-primary/20' label='Inicia Sesión' onClick={() => setIsOpenUserMenu(false)} />
+        <Btn variant='register' className='border-secondary bg-secondary/20' label='Registrate' onClick={() => setIsOpenUserMenu(false)} />
+       </>
+       
       )}
     </section>
   )
