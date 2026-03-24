@@ -3,32 +3,33 @@ import { NavLink } from 'react-router'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaTools } from 'react-icons/fa'
 import { FaRegPlayCircle } from 'react-icons/fa'
+import { CoustomersReviews, type CustomerReviewProps } from '../mook'
+import { HERO_MOOK, ITV_MOOK, SERVICE_MOOK } from '../config'
 import heroImage from '../assets/images/hero.png'
 import engineRepair from '../assets/images/engine_repair.png'
 import generalMaintenance from '../assets/images/general_maintenance.png'
 import mp4Frenos from '../assets/Generación_de_Video_Sistema_de_Frenos.mp4'
 import CustomerReview from '../components/CustomerReview'
-import { CoustomersReviews, type CustomerReviewProps } from '../mook'
 import Hero from '../components/Hero'
 import Aside from '../components/Aside'
 import Title from '../components/Title'
+import P from '../components/P'
 
 const App: FC = () => {
-
   const [customersReviews] = useState<CustomerReviewProps[]>(CoustomersReviews)
-
+  
   return (
-    <main>
+    <main className='bg-main'>
       {/* Hero */}
       <Hero img={{
         src: heroImage,
         srcSet: `${heroImage} 1x, ${heroImage} 2x`,
         alt: 'Imagen de un taller mecánico con un coche en el elevador y un mecánico trabajando en él'
-      }} label="Taller Cloe, cuidado experto para tu vehículo" description="Donde la fuerza industrial se une a la precisión de la ingeniería. Tratamos cada vehículo como una obra maestra de la mecánica y brindamos atención especializada que supera los estándares de fábrica." />
+      }} label={HERO_MOOK.label} description={HERO_MOOK.description} /> 
       {/* Servicios */}
       <section className="max-w-7xl mx-auto my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4 px-4">
         <Aside>
-          <Title label="Nuestros Servicios" tag="h2" />
+          <Title label={SERVICE_MOOK.title} tag="h2" />
         </Aside>
         <article className="flex flex-col lg:flex-row justify-between gap-4 col-span-2">
           <section className="lg:mt-8 w-full relative bg-black/50">
@@ -40,7 +41,7 @@ const App: FC = () => {
             <article className="absolute top-0 left-0 flex flex-col gap-2 justify-center h-full w-full px-4 lg:px-20 bg-black/50">
               <div className="flex flex-col lg:mb-12">
                 <h2 className="text-2xl lg:text-4xl my-2 font-bold text-white">
-                  Mantenimiento general
+                  {SERVICE_MOOK.maintenance.label}
                 </h2>
                 <i className="hidden lg:inline absolute lg:top-4 lg:left-20 text-yellow-500">
                   <FaTools size={48} className="text-yellow-500" />
@@ -49,15 +50,14 @@ const App: FC = () => {
                   <FaTools size={24} className="text-yellow-500" />
                 </i>
                 <p className="text-white max-w-96 lg:text-xl">
-                  Cuidado preventivo diseñado para mantener su máquina funcionando al máximo
-                  rendimiento mediante rigurosas inspecciones multipunto.
+                  {SERVICE_MOOK.maintenance.description}
                 </p>
               </div>
               <NavLink
                 to={'plans'}
                 className="group lg:text-lg hover:text-orange-400 inline-flex items-center gap-4 text-orange-200 lg:mt-2"
               >
-                Explorar los planes de mantenimiento{' '}
+                Explorar los planes de mantenimiento
                 <BsArrowRight size={24} className="group-hover:text-blue-400" />
               </NavLink>
             </article>
@@ -67,9 +67,9 @@ const App: FC = () => {
             <article className="flex flex-col gap-4">
               <video className="w-full max-h-72" src={mp4Frenos} controls></video>
               <div className="flex flex-col gap-2 bg-black/50 p-4">
-                <h3 className="text-xl lg:text-2xl font-bold text-white">Sistemas de frenos</h3>
+                <h3 className="text-xl lg:text-2xl font-bold text-white">{SERVICE_MOOK.brakes.label}</h3>
                 <p className="text-white">
-                  Soluciones de potencia de frenado de alto rendimiento y calibración de seguridad.
+                  {SERVICE_MOOK.brakes.description}
                 </p>
               </div>
             </article>
@@ -79,22 +79,20 @@ const App: FC = () => {
           <section className="px-4 bg-gray-800 flex items-center lg:rounded-lg lg:px-14">
             <div className="flex flex-col gap-4 py-8">
               <h2 className="text-xl lg:text-4xl font-bold mb-4 text-white">
-                Diagnóstico avanzado
+                {SERVICE_MOOK.diagnostics.label}
               </h2>
               <p className="text-white lg:text-xl">
-                Precisión milimétrica utilizando la última tecnología de escaneo y telemetría
-                digital.
+                {SERVICE_MOOK.diagnostics.description}
               </p>
             </div>
           </section>
           <section className="flex flex-col lg:flex-row items-center lg:px-14 gap-8 lg:gap-16 bg-gray-800 min-h-80 lg:rounded-lg">
             <article className="w-full flex flex-col justify-center gap-4 p-4">
               <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white">
-                Reparación de motores
+                {SERVICE_MOOK.engine_repair.label}
               </h2>
               <p className="text-white lg:text-xl">
-                Reconstrucciones completas y restauración de componentes utilizando piezas con
-                especificaciones OEM y experiencia de un técnico maestro.
+                {SERVICE_MOOK.engine_repair.description}
               </p>
             </article>
             <img
@@ -109,19 +107,12 @@ const App: FC = () => {
       <section className="max-w-7xl mx-auto grid grid-flow-row md:grid-flow-col my-8">
         <article className="mt-8 px-4 flex flex-wrap items-center lg:col-span-2 gap-8 lg:gap-0">
           <div className="flex flex-col gap-4">
-            <h2 className="text-2xl lg:text-5xl font-bold mb-4 text-white">
-              ¿Listo para la próxima ITV?
-            </h2>
-            <p className="text-lg lg:text-xl text-white">
-              En el taller Juan Valdivia, nos especializamos en preparar tu vehículo para la
-              Inspección Técnica de Vehículos (ITV). Nuestro equipo de expertos realizará una
-              revisión exhaustiva de tu automóvil, asegurándose de que cumpla con todos los
-              requisitos necesarios para pasar la ITV sin problemas. Desde la revisión de frenos y
-              luces hasta la verificación de emisiones, nos encargamos de cada detalle para que
-              puedas conducir con confianza y seguridad.
-            </p>
+            <Title label= {ITV_MOOK.label} tag="h2" size="lg" />
+            <P>
+              {ITV_MOOK.description}
+            </P>
           </div>
-          <div className="w-full lg:max-w-md bg-gray-950 rounded-lg p-4 flex gap-8 relative">
+          <div className="w-full lg:max-w-md bg-title rounded-lg p-4 flex gap-8 relative">
             <section className="min-w-26 flex items-center gap-4">
               {customersReviews.map((review, index) => (
                 <CustomerReview key={index} {...review}/>
@@ -129,38 +120,46 @@ const App: FC = () => {
             
             </section>
             <div className='flex items-center'>
-              <span className="xxs:text-xs xs:text-sm sm:text-lg md:text-xl">Lo que dicen nuestros clientes</span>
+              <span className="xxs:text-xs xs:text-sm sm:text-lg md:text-xl text-link">Lo que dicen nuestros clientes</span>
             </div>
           </div>
         </article>
         <article className="mt-8 px-4">
-          <h2 className="text-2xl font-bold mb-4 text-white">¿Reservar una cita?</h2>
+          <Title label={ITV_MOOK.book_an_appointment.label} tag="h2" size="lg" />
           <span>
-            Rellena el formulario y nos pondremos en contacto contigo para agendar tu cita.
+            {ITV_MOOK.book_an_appointment.description}
           </span>
-          <form className="mt-4 flex flex-col space-y-2 bg-black/50 p-4 rounded-lg">
+          <form className="mt-4 flex flex-col space-y-2 bg-form p-4 rounded-lg">
             <input
+              id="name"
+              name="name"
               type="text"
-              placeholder="Nombre completo"
-              className="w-full mt-4 px-4 py-2 rounded bg-gray-800 text-white"
+              placeholder={ITV_MOOK.book_an_appointment.data.name}
+              className="w-full mt-4 px-4 py-2 rounded bg-input-bg text-input-text"
             />
             <input
+              id="email"
+              name="email"
               type="email"
-              placeholder="Correo electrónico"
-              className="w-full mt-4 px-4 py-2 rounded bg-gray-800 text-white"
+              placeholder={ITV_MOOK.book_an_appointment.data.email}
+              className="w-full mt-4 px-4 py-2 rounded bg-input-bg text-input-text"
             />
             <input
+              id="phone"
+              name="phone"
               type="tel"
-              placeholder="Número de teléfono"
-              className="w-full mt-4 px-4 py-2 rounded bg-gray-800 text-white"
+              placeholder={ITV_MOOK.book_an_appointment.data.phone}
+              className="w-full mt-4 px-4 py-2 rounded bg-input-bg text-input-text"
             />
             <textarea
-              placeholder="Mensaje"
-              className="w-full mt-4 px-4 py-2 rounded bg-gray-800 text-white"
+              id="message"
+              name="message"
+              placeholder={ITV_MOOK.book_an_appointment.data.message}
+              className="w-full mt-4 px-4 py-2 rounded bg-input-bg text-input-text"
             ></textarea>
             <button
               type="submit"
-              className="mt-4 px-4 py-2 bg-yellow-500 text-black font-bold rounded"
+              className="mt-4 px-4 py-2 bg-yellow-500 font-bold rounded"
             >
               Enviar
             </button>

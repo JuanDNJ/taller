@@ -19,7 +19,7 @@ const CurrentUser = () => {
             {user.photoURL && (
               <Avatar src={user.photoURL as string} alt={user.displayName || 'User Avatar'} />
             )}
-            <small className="hidden sm:block text-orange-300/70 font-bold text-xs">
+            <small className="hidden sm:block text-link font-bold text-xs">
               {user.displayName}
             </small>
           </header>

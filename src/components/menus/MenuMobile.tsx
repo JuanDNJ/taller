@@ -1,7 +1,6 @@
 import { FaBars } from "react-icons/fa";
-
-import Menu from './Menu'
 import { useState, type FC } from 'react'
+import Menu from "./Menu";
 
 type MenuResponsiveProps = {}
 

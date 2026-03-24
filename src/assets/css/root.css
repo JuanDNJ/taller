@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+:root {
+    --bg: #ffffff;
+    --bg-header: #ffffff;
+    --bg-footer: #034377;
+    --text: #2e2e2e;
+    --brand: rgb(42, 179, 233);
+    --link: #444444;
+    --paragraph: var(--text);
+    --title: rgb(42, 179, 233);
+    --bg-form: #343434;
+    --bg-input: #e9e2e2;
+    --text-input: #333333;
+    --info: #f6fca2;
+    --warning: #fcb98c;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0e0707;
+        --bg-header: #2e2e2e;
+        --bg-footer: rgb(19, 73, 95);
+        --text: #ffffff;
+        --brand: #ffffff;
+        --link: #e6e6e6;
+        --paragraph: var(--text);
+        --title: #F0B100;
+        --bg-form: #e9e2e2;
+        --bg-input: #343434;
+        --text-input: #ffffff;
+        --info: #f0fc49;
+        --warning: #ff9f9c;
+    }
+}
+
+@theme {
+    --color-main: var(--bg);f
+    --color-header: var(--bg-header);
+    --color-footer: var(--bg-footer);
+    --color-color-base: var(--text);
+    --color-brand: var(--brand);
+    --color-link: var(--link);
+    --color-form: var(--bg-form);
+    --color-paragraph: var(--paragraph);
+    --color-title: var(--title);
+    --color-placeholder: var(--text);
+    --color-input-bg: var(--bg-input);
+    --color-input-text: var(--text-input);
+    --color-info: var(--info);
+    --color-warning: var(--warning);
+    /* breakpoints */
+    --breakpoint-xxs: 320px;
+    --breakpoint-xs: 425px;
+}
