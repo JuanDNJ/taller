@@ -108,9 +108,9 @@ const App: FC = () => {
         <article className="mt-8 px-4 flex flex-wrap items-center lg:col-span-2 gap-8 lg:gap-0">
           <div className="flex flex-col gap-4">
             <Title label= {ITV_MOOK.label} tag="h2" size="lg" />
-            <P>
+            <p className="text-paragraph">
               {ITV_MOOK.description}
-            </P>
+            </p>
           </div>
           <div className="w-full lg:max-w-md bg-title rounded-lg p-4 flex gap-8 relative">
             <section className="min-w-26 flex items-center gap-4">
@@ -120,13 +120,13 @@ const App: FC = () => {
             
             </section>
             <div className='flex items-center'>
-              <span className="xxs:text-xs xs:text-sm sm:text-lg md:text-xl text-link">Lo que dicen nuestros clientes</span>
+              <span className="xxs:text-xs xs:text-sm sm:text-lg m :text-xl text-link">Lo que dicen nuestros clientes</span>
             </div>
           </div>
         </article>
         <article className="mt-8 px-4">
           <Title label={ITV_MOOK.book_an_appointment.label} tag="h2" size="lg" />
-          <span>
+          <span className="text-paragraph">
             {ITV_MOOK.book_an_appointment.description}
           </span>
           <form className="mt-4 flex flex-col space-y-2 bg-form p-4 rounded-lg">
