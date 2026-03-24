@@ -45,7 +45,7 @@
 }
 
 @theme {
-    --color-main: var(--bg);f
+    --color-main: var(--bg);
     --color-header: var(--bg-header);
     --color-footer: var(--bg-footer);
     --color-color-base: var(--text);
