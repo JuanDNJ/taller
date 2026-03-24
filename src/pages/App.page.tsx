@@ -13,8 +13,6 @@ import CustomerReview from '../components/CustomerReview'
 import Hero from '../components/Hero'
 import Aside from '../components/Aside'
 import Title from '../components/Title'
-import P from '../components/P'
-
 const App: FC = () => {
   const [customersReviews] = useState<CustomerReviewProps[]>(CoustomersReviews)
   
