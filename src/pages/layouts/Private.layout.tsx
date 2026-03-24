@@ -2,7 +2,8 @@ import type { FC } from 'react'
 import { Navigate, Outlet } from 'react-router'
 import { useAccount } from '../../context/hooks/useAccount'
 import { ToastContainer } from 'react-toastify'
-import Header from '../../components/Header'
+import Header from './Header'
+import Footer from './Footer'
 
 const PrivateLayout: FC = () => {
   const { user } = useAccount()
@@ -12,9 +13,8 @@ const PrivateLayout: FC = () => {
   return (
     <>
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
+      <Footer />
       <ToastContainer
         containerId={'private-toast'}
         position="top-right"

@@ -3,9 +3,9 @@ import Menu from './Menu'
 
 const MenuDesktop: FC = () => {
   return (
-    <nav className="hidden lg:flex">
+    <section className="hidden lg:flex">
       <Menu variant="desktop" />
-    </nav>
+    </section>
   )
 }
 
