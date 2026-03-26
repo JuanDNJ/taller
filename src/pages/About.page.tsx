@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import TitlePage from '../components/TitlePage'
+import TitlePage from '@/components/TitlePage'
 
 const AboutPage: FC = () => {
   return (
@@ -21,5 +21,5 @@ const AboutPage: FC = () => {
     </main>
   )
 }
-
+               
 export default AboutPage
