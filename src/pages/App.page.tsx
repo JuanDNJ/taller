@@ -25,7 +25,7 @@ const App: FC = () => {
         alt: 'Imagen de un taller mecánico con un coche en el elevador y un mecánico trabajando en él'
       }} label={HERO_MOOK.label} description={HERO_MOOK.description} /> 
       {/* Servicios */}
-      <section className="max-w-7xl mx-auto my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4 px-4">
+      <section className="container mx-auto my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4 px-4">
         <Aside>
           <Title label={SERVICE_MOOK.title} tag="h2" />
         </Aside>
@@ -102,7 +102,7 @@ const App: FC = () => {
         </article>
       </section>
       {/* ITV */}
-      <section className="max-w-7xl mx-auto grid grid-flow-row md:grid-flow-col my-8">
+      <section className="container mx-auto grid grid-flow-row md:grid-flow-col my-8">
         <article className="mt-8 px-4 flex flex-wrap items-center lg:col-span-2 gap-8 lg:gap-0">
           <div className="flex flex-col gap-4">
             <Title label= {ITV_MOOK.label} tag="h2" size="lg" />

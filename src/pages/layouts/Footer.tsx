@@ -7,7 +7,7 @@ import P from "../../components/P";
 const Footer: FC = () => {
   return (
     <footer className="flex flex-col bg-footer py-8">
-      <section className="w-full max-w-7xl mx-auto">
+      <section className="container mx-auto">
         <article className="mt-8 px-4 flex flex-wrap lg:flex-row lg:gap-8">
           <header className="mb-4 flex flex-col items-center w-full ">
             <h2 className="text-2xl font-bold mb-4 text-white">{TITLE_APP}</h2>
