@@ -6,7 +6,7 @@
     --tertiary-color: #13495F;
     --cuaternary-color: #0E0707;
     --black: #131313;
-
+    --linear-gradient-default: #061f38;
     --dark-color: #343434;
     --light-color: #fffffb;
 
@@ -49,7 +49,8 @@
         --warning: var(--warning);
         --menu-bars: var(--light-color);
         --outline: var(--light-color);
-          --brand: rgb(42, 179, 233);
+        --brand: rgb(42, 179, 233);
+        --linear-gradient-default: #000000;
     }
 }
 
@@ -70,11 +71,12 @@
     --color-warning: var(--warning);
     --color-menu-bars: var(--menu-bars);
     --color-outline: var(--outline);
-    --font-body: 'Lucida Grande', 'Trebuchet MS', 'Lucida Sans Unicode',  'Lucida Sans', Arial, sans-serif;
+    --font-body: 'Lucida Grande', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif;
     --color-primary: var(--primary-color);
     --color-secondary: var(--secondary-color);
     --color-tertiary: var(--tertiary-color);
     --color-cuaternary: var(--cuaternary-color);
+    --color-gradient-default: var(--linear-gradient-default);
     /* breakpoints */
     --breakpoint-xxs: 320px;
     --breakpoint-xs: 425px;

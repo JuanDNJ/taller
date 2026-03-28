@@ -3,7 +3,8 @@ import TitlePage from '@/components/TitlePage'
 import img from '@/assets/images/maestro_técnico_trabajando.png'
 import Container from '@/components/ui/Container'
 import Title from '@/components/Title'
-
+import entorno from '@/assets/images/entorno_taller.png'
+import details from '@/assets/images/herramientas_de_alta_gama.png'
 const PrecisionSvg = () => {
   return (
     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,12 +47,12 @@ const AboutPage: FC = () => {
 
   const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='text-yellow-500'>ÚNICO ESTÁNDAR</span>")
   return (
-    <main className='bg-gradient-to-r from-black to-black/40'>
-      <section className='grid grid-cols-2 gap-8 '>
+    <main className=''>
+      <section className='grid grid-cols-2 gap-8 bg-gradient-to-r from-gradient-default to-gradient-default/60'>
         <article className='flex flex-col gap-4 justify-center px-16'>
           <TitlePage label={uiTitle} />
           <section className="mt-8 px-4">
-            <p>
+            <p className='text-main text-3xl'>
               En Taller CLOE, no solo reparamos vehículos; diseñamos
               soluciones. Con más de tres décadas de maestría en cuidado
               automotriz de alta gama, fusionamos la precisión quirúrgica
@@ -65,41 +66,51 @@ const AboutPage: FC = () => {
             className="w-[77dvw] h-screen object-cover"
             alt="Maestro técnico trabajando"
           />
-          <article className='bg-black absolute -bottom-12 -left-24 max-w-md p-8'>
-          <Title label="Especificaciones del Taller" />
-          <section className="mt-8">
-            <p className='text-white text-2xl'>
-              Entornos de flujo de trabajo
-              optimizados para una
-              ejecución mecánica de
-              grado quirúrgico.
-            </p>
-          </section>
-        </article>
-        </article>
-        
-      </section>
-      <section className="my-22">
-        <article className='max-w-2xl'>
-          <Title label="Nuestra Historia" />
-          <p className='text-white text-lg mt-4'>
-            Fundado en el corazón de la excelencia industrial, Taller CLOE comenzó con un solo elevador
-            y la visión de redefinir el mantenimiento automotriz para vehículos de lujo y alto
-            rendimiento. Hoy, somos el referente de autoridad técnica.
-          </p>
-        </article>
-        <article className='grid grid-cols-3 gap-4'>
-          {items.map((item, index) => (
-            <section key={index} className="mt-12 bg-[#0B1326] p-8">
-              {item.icon}
-              <Title label={item.title} />
-              <p className='text-white text-lg mt-4'>
-                {item.description}
+          <article className='bg-gradient-default absolute -bottom-12 -left-24 max-w-md p-8'>
+            <Title label="Especificaciones del Taller" />
+            <section className="mt-8">
+              <p className='text-white text-2xl'>
+                Entornos de flujo de trabajo
+                optimizados para una
+                ejecución mecánica de
+                grado quirúrgico.
               </p>
             </section>
-          ))}
+          </article>
         </article>
+
       </section>
+      <section className="bg-gradient-to-r from-gradient-default to-gradient-default/60">
+        <Container>
+          <section className="pt-44">
+            <article className='max-w-2xl'>
+              <Title label="Nuestra Historia" />
+              <p className='text-white text-lg mt-4'>
+                Fundado en el corazón de la excelencia industrial, Taller CLOE comenzó con un solo elevador
+                y la visión de redefinir el mantenimiento automotriz para vehículos de lujo y alto
+                rendimiento. Hoy, somos el referente de autoridad técnica.
+              </p>
+            </article>
+            <article className='grid grid-cols-3 gap-4'>
+              {items.map((item, index) => (
+                <section key={index} className="mt-12 bg-[#0B1326] p-8">
+                  {item.icon}
+                  <Title label={item.title} />
+                  <p className='text-white text-lg mt-4'>
+                    {item.description}
+                  </p>
+                </section>
+              ))}
+            </article>
+          </section>
+          <section className="my-22 grid grid-flow-row auto-rows-[512px] grid-cols-12 gap-2 overflow-hidden">
+            <img className="row-1 col-span-8 w-full object-cover " src={entorno} alt="Entorno del taller" />
+            <div className='row-1 col-span-4 bg-main'>9</div>
+            <img className="row-2 col-span-4 w-full object-cover" src={details} alt="Herramientas de alta gama" />
+          </section>
+        </Container>
+      </section>
+
     </main>
   )
 }
