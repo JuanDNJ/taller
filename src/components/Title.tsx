@@ -13,7 +13,7 @@ const Title: FC<TitleProps> = ({ label, tag, size, color, className  }) => {
   const Tag = tag || 'h1'
   return (
     <Tag
-      className={`${TAGS_SIZE[Tag]} ${color || 'text-title'} ${size && TITLE_SIZE[size]} font-bold ${className }`}
+      className={`${TAGS_SIZE[Tag]} ${color} ${size && TITLE_SIZE[size]} font-bold ${className }`}
     >
       {label}
     </Tag>
