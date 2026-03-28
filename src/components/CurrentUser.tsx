@@ -41,7 +41,7 @@ const CurrentUser = () => {
         : (
           <>
             {/* <SignInWithGoogle />  */}
-            <Btn className='border-primary bg-primary/20' label='Inicia Sesión' onClick={() => setIsOpenUserMenu(false)} />
+            <Btn className='border-transparent text-white bg-tertiary' label='Inicia Sesión' onClick={() => setIsOpenUserMenu(false)} />
             <Btn className='border-secondary bg-secondary/20' label='Registrate' onClick={() => setIsOpenUserMenu(false)} />
           </>
           )}
