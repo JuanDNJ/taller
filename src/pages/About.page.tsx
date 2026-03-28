@@ -67,16 +67,21 @@ const AboutPage: FC = () => {
       </section>
       <section className="bg-[#131B2E]">
         <Container>
-          <section className="pt-44">
-            <article className='max-w-2xl '>
-              <Title color="text-white" label="Nuestra Historia" />
-              <p className='text-white text-lg mt-4'>
-                Fundado en el corazón de la excelencia industrial, Taller CLOE comenzó con un solo elevador
-                y la visión de redefinir el mantenimiento automotriz para vehículos de lujo y alto
-                rendimiento. Hoy, somos el referente de autoridad técnica.
-              </p>
+          <section className="pt-24">
+            <article className='grid grid-cols-2 gap-4'>
+              <div className='flex flex-col'>
+                <Title color="text-white" label="Nuestra Historia" />
+                <p className='text-white text-2xl mt-4'>
+                  Fundado en el corazón de la excelencia industrial, Taller CLOE comenzó con un solo elevador
+                  y la visión de redefinir el mantenimiento automotriz para vehículos de lujo y alto
+                  rendimiento. Hoy, somos el referente de autoridad técnica.
+                </p>
+              </div>
+             <div className='flex flex-col items-end justify-end gap-4'>
+               <i className='inline-flex text-gray-800 text-6xl font-black'>30+ AÑOS</i>
+             </div>
             </article>
-            <article className='grid grid-cols-3 gap-4 pb-22'>
+            <article className='grid grid-cols-3 gap-8 pb-22'>
               {items.map((item, index) => (
                 <section key={index} className="mt-12 bg-[#0B1326] p-8 flex flex-col gap-4">
                   <i className='mb-4'>{item.icon}</i>
