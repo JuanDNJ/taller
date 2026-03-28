@@ -24,12 +24,12 @@ const Hero: FC<HeroProps> = ({ img, label, description }) => {
                 <section className="flex flex-col max-w-4xl">
                     <TitlePage tag="h1" label={label} />
                     <article className="mt-8 px-2">
-                        <p className="text-lg lg:text-3xl text-secondary font-medium px-2">
+                        <p className="text-2xl lg:text-3xl text-secondary font-medium px-2">
                             {description}
                         </p>
                         <footer className="mt-8 px-4 md:px-8 lg:py-12 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
-                            <Btn size="large" className="text-xl text-white bg-blue-800" variant="contact" label="Contáctanos" onClick={() => console.log("Contact button clicked")} />
-                            <Btn size="large" className="text-xl bg-white/50 text-white border-white/50" variant="progress" label="Ver tu proceso" onClick={() => console.log("Progress button clicked")} />
+                            <Btn size="large" className="text-xl text-white bg-[#00236F] border-transparent" label="Contáctanos" onClick={() => console.log("Contact button clicked")} />
+                            <Btn size="large" className="text-xl bg-white/20 text-white border-white/10"  label="Ver tu proceso" onClick={() => console.log("Progress button clicked")} />
                         </footer>
                     </article>
                 </section>
