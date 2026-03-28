@@ -18,21 +18,21 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <App />,
+        element: <App />
       },
       {
         path: 'about',
-        element: <AboutPage />,
+        element: <AboutPage />
       },
       {
         path: 'services',
-        element: <ServicesPage />,
+        element: <ServicesPage />
       },
       {
         path: 'contact',
-        element: <ContactPage />,
-      },
-    ],
+        element: <ContactPage />
+      }
+    ]
   },
   {
     path: '/account',
@@ -40,12 +40,12 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Account />,
-      },
-    ],
+        element: <Account />
+      }
+    ]
   },
   {
     path: '*',
-    element: <PageNotFound />,
-  },
+    element: <PageNotFound />
+  }
 ])

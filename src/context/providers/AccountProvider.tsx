@@ -19,11 +19,11 @@ const AccountProvider: FC<Children> = ({ children }) => {
     if (user === undefined) return
     if (user) {
       toast.success(`¡Bienvenido, ${user.displayName || user.email || 'usuario'}!`, {
-        toastId: 'welcome',
+        toastId: 'welcome'
       })
     } else {
       toast.info('Regístrate o inicia sesión para acceder a todas las funciones.', {
-        toastId: 'login',
+        toastId: 'login'
       })
     }
   }, [user])

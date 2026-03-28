@@ -1,5 +1,5 @@
 import { signOut } from '../services/account'
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from 'react-icons/fa'
 
 const LogOutOfGoogle = () => {
   return <button onClick={signOut} className='group inline-flex items-center gap-2 cursor-pointer'>

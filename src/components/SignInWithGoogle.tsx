@@ -1,5 +1,5 @@
 import { signInWithGoogle } from '../services/account'
-import { FaGoogle } from "react-icons/fa";
+import { FaGoogle } from 'react-icons/fa'
 
 const SignInWithGoogle = () => {
   return <button onClick={signInWithGoogle} className='text-xs group text-white inline-flex items-center gap-2 cursor-pointer'>

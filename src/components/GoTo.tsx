@@ -17,14 +17,13 @@ const GoTo: FC<GoToProps> = ({ to, children, variant = 'default' }) => {
       } else {
         navigate(+1)
       }
-      return
     } else {
       navigate(to)
     }
   }
   const mode = {
     history: 'text-blue-200 hover:text-cyan-400 underline ',
-    default: 'text-blue-200 hover:text-cyan-400 underline',
+    default: 'text-blue-200 hover:text-cyan-400 underline'
   }
 
   return (

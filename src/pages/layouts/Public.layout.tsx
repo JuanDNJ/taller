@@ -1,6 +1,6 @@
 import 'react-toastify/dist/ReactToastify.css'
 import type { FC } from 'react'
-import {  Outlet } from 'react-router'
+import { Outlet } from 'react-router'
 import { ToastContainer } from 'react-toastify'
 import Header from './Header'
 import Footer from './Footer'

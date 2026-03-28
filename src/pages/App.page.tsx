@@ -1,8 +1,8 @@
 import { useState, type FC } from 'react'
 import { NavLink } from 'react-router'
 import { BsArrowRight } from 'react-icons/bs'
-import { FaTools } from 'react-icons/fa'
-import { FaRegPlayCircle } from 'react-icons/fa'
+import { FaTools, FaRegPlayCircle } from 'react-icons/fa'
+
 import { CoustomersReviews, type CustomerReviewProps } from '../mook'
 import { HERO_MOOK, ITV_MOOK, SERVICE_MOOK } from '@/config'
 import heroImage from '@/assets/images/hero2.png'

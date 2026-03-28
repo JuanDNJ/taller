@@ -1,8 +1,8 @@
-import type { FC } from "react";
-import { FaGithubAlt, FaGoogle, FaShareAlt } from "react-icons/fa";
-import { NavLink } from "react-router";
-import { CONTACT, OURS_SERVICES_LINKS, TITLE_APP, USEFUL_LINKS } from "../../config";
-import P from "../../components/P";
+import type { FC } from 'react'
+import { FaGithubAlt, FaGoogle, FaShareAlt } from 'react-icons/fa'
+import { NavLink } from 'react-router'
+import { CONTACT, OURS_SERVICES_LINKS, TITLE_APP, USEFUL_LINKS } from '../../config'
+import P from '../../components/P'
 
 const Footer: FC = () => {
   return (
@@ -24,11 +24,11 @@ const Footer: FC = () => {
                   key={link.path}
                   to={link.path}
                   className="group hover:text-orange-400 gap-4 text-orange-200 mt-2"
-                > 
+                >
                   {link.label}
                 </NavLink>
               ))}
-            
+
             </section>
             <section className="mb-4 flex flex-col items-center lg:items-start">
               <header>
@@ -102,4 +102,4 @@ const Footer: FC = () => {
   )
 }
 
-export default Footer;
+export default Footer

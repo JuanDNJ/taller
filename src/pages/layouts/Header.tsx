@@ -3,7 +3,7 @@ import Brand from '../../components/Brand'
 import CurrentUser from '../../components/CurrentUser'
 import MenuMobile from '../../components/menus/MenuMobile'
 import MenuDesktop from '../../components/menus/MenuDesktop'
-import { NAME_APP, TITLE_APP, SUBTITLE_APP} from '../../config'
+import { NAME_APP, TITLE_APP, SUBTITLE_APP } from '../../config'
 
 const Header: FC = () => {
   return (

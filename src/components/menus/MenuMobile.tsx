@@ -1,10 +1,8 @@
-import { FaBars } from "react-icons/fa";
+import { FaBars } from 'react-icons/fa'
 import { useState, type FC } from 'react'
-import Menu from "./Menu";
+import Menu from './Menu'
 
-type MenuResponsiveProps = {}
-
-const MenuMobile: FC<MenuResponsiveProps> = () => {
+const MenuMobile: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const toggleMenu = () => {
     setIsOpen(!isOpen)

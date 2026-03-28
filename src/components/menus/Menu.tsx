@@ -29,10 +29,10 @@ const Item: FC<ItemLink> = ({ path, label, title, onClick }) => {
 
 const Menu: FC<MenuProps> = ({ variant = 'desktop', onClick }) => {
   const [items] = useState<ItemLink[]>(MENU_LINKS)
-  
+
   const variantStyle = {
     mobile: 'flex-col w-full h-screen z-100',
-    desktop: 'flex-row items-center',
+    desktop: 'flex-row items-center'
   }
   return (
     <nav className={`flex gap-4 lg:gap-8 ${variantStyle[variant]}`}>

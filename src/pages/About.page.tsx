@@ -21,5 +21,5 @@ const AboutPage: FC = () => {
     </main>
   )
 }
-               
+
 export default AboutPage

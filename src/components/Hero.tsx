@@ -1,6 +1,6 @@
-import type { FC } from "react";
-import TitlePage from "./TitlePage";
-import Btn from "./Btn";
+import type { FC } from 'react'
+import TitlePage from './TitlePage'
+import Btn from './Btn'
 
 type HeroProps = {
     img: {
@@ -13,7 +13,7 @@ type HeroProps = {
 }
 
 const Hero: FC<HeroProps> = ({ img, label, description }) => {
-    return (
+  return (
         <section className="relative min-h-[62svh] sm:min-h-[55svh] md:min-h-[96svh]" >
             <img
                 srcSet={`${img.src} 1x, ${img.src} 2x`}
@@ -28,14 +28,14 @@ const Hero: FC<HeroProps> = ({ img, label, description }) => {
                             {description}
                         </p>
                         <footer className="mt-8 px-4 md:px-8 lg:py-12 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
-                            <Btn size="large" className="text-xl text-white bg-[#00236F] border-transparent" label="Contáctanos" onClick={() => console.log("Contact button clicked")} />
-                            <Btn size="large" className="text-xl bg-white/20 text-white border-white/10"  label="Ver tu proceso" onClick={() => console.log("Progress button clicked")} />
+                            <Btn size="large" className="text-xl text-white bg-[#00236F] border-transparent" label="Contáctanos" onClick={() => console.log('Contact button clicked')} />
+                            <Btn size="large" className="text-xl bg-white/20 text-white border-white/10" label="Ver tu proceso" onClick={() => console.log('Progress button clicked')} />
                         </footer>
                     </article>
                 </section>
             </article>
         </section >
-    )
+  )
 }
 
-export default Hero;
+export default Hero

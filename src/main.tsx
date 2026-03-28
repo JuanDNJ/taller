@@ -10,5 +10,5 @@ const talleresCloe = createRoot(queryElement(ROOT_LAYOUT)!)
 talleresCloe.render(
   <StrictMode>
     <AppRouter />
-  </StrictMode>,
+  </StrictMode>
 )
