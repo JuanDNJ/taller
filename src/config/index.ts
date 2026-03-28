@@ -109,7 +109,7 @@ const ABOUT = {
 }
 
 const HERO_MOOK = {
-    label: 'Taller Cloe, cuidado experto para tu vehículo',
+    label: 'Taller Cloe cuidado experto para tu vehículo',
     description: 'Donde la fuerza industrial se une a la precisión de la ingeniería. Tratamos cada vehículo como una obra maestra de la mecánica y brindamos atención especializada que supera los estándares de fábrica.'
 }
 
