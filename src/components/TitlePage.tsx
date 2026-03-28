@@ -9,6 +9,7 @@ const TitlePage: FC<TitlePageProps> = ({ label, tag }) => {
   label = label
     .replace('Taller Cloe', "<p class='text-bg'>Taller Cloe</p>")
     .replace('cuidado experto', "<span class='text-yellow-500'>CUIDADO EXPERTO</span>")
+    
 
   const Tag = tag || 'h1'
   return (
