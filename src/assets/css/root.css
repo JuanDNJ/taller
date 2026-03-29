@@ -29,6 +29,8 @@
     --menu-bars: #383838;
     --outline: #50f0c8;
 
+    scrollbar-color: var(--primary-color) var(--light-color);
+    scrollbar-width: thin;
     @media (max-width: 1024px) {
         font-size: 16px;
     }

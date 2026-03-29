@@ -2,12 +2,13 @@ import type { FC } from 'react'
 import { NavLink } from 'react-router'
 
 type BrandProps = {
-  label: string
+  label: string;
+  className?: string;
 }
 
-const Brand: FC<BrandProps> = ({ label }) => {
+const Brand: FC<BrandProps> = ({ label, className }) => {
   return (
-    <NavLink to="/" className="hover:underline text-brand text-xl sm:text-3xl font-bold">
+    <NavLink to="/" className={`text-xl sm:text-5xl font-black ${className}`}  >
       {label}
     </NavLink>
   )

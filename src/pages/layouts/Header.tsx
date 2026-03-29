@@ -8,11 +8,11 @@ import Container from '@/components/ui/Container'
 
 const Header: FC = () => {
   return (
-    <header className="bg-header relative sticky top-0 z-50">
+    <header className="bg-header relative sticky top-0 z-50 border-b-2 border-yellow-500/50">
       <Container>
         <section className="flex justify-between ">
           <section className="hidden lg:flex items-center" title={`${TITLE_APP} - ${SUBTITLE_APP}`}>
-            <Brand label={NAME_APP} />
+            <Brand label={NAME_APP} className='text-yellow-500'/>
           </section>
           <MenuMobile />
           <MenuDesktop />
