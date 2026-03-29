@@ -2,22 +2,22 @@
 
 :root {
     --primary-color: #E8B100;
-    --secondary-color: #ececec;
+    --secondary-color: #5f5f5f;
     --tertiary-color: #13495F;
     --cuaternary-color: #0E0707;
     --black: #131313;
     --linear-gradient-default: #061f38;
-    --dark-color: #343434;
-    --light-color: #fffffb;
+    --dark-color: #0B1326;
+    --light-color: #ffffff;
 
-    --bg: var(--secondary-color);
+    --bg: var(--light-color);
     --bg-header: var(--light-color);
     --bg-footer: rgb(19, 73, 95);
-
-    --text: var(--black);
+    --typography: #5f5f5f;
+    --text: var(--typography);
     --brand: rgb(42, 179, 233);
     --link: #666666;
-    --paragraph: var(--black);
+    --paragraph: var(--typography);
     --title: rgb(42, 179, 233);
 
     --bg-form: var(--dark-color);
@@ -36,11 +36,12 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: var(--secondary-color);
+        --bg: #0B1326;
         --bg-header: var(--black);
         --text: var(--light-color);
         --link: var(--light-color);
         --paragraph: var(--light-color);
+        --typography: #cbcbcb;
         --title: var(--primary-color);
         --bg-form: var(--light-color);
         --bg-input: var(--dark-color);
@@ -77,6 +78,7 @@
     --color-tertiary: var(--tertiary-color);
     --color-cuaternary: var(--cuaternary-color);
     --color-gradient-default: var(--linear-gradient-default);
+    --color-typography: var(--typography);
     /* breakpoints */
     --breakpoint-xxs: 320px;
     --breakpoint-xs: 425px;

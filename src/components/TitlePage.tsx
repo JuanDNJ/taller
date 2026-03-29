@@ -13,7 +13,7 @@ const TitlePage: FC<TitlePageProps> = ({ label, tag }) => {
   const Tag = tag || 'h1'
   return (
     <Tag
-      className="text-4xl md:text-6xl lg:text-6xl font-bold mt-4 px-4 text-white"
+      className="text-4xl md:text-6xl lg:text-6xl font-bold mt-4 px-4 text-typography"
       dangerouslySetInnerHTML={{ __html: label }}
     />
   )
