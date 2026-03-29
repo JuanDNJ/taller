@@ -10,13 +10,8 @@ import OkSvg from '@/components/ui/icons/OkSvg'
 
 type LegacyProps = { label: string, description: string, icon?: string }
 
-
-
 const AboutPage: FC = () => {
-
-
   const [items] = useState<LegacyProps[]>(ABOUT.history.story_elements)
-
 
   const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='text-yellow-500'>ÚNICO ESTÁNDAR</span>")
   return (
@@ -100,7 +95,7 @@ const AboutPage: FC = () => {
             <div className="row-1 col-span-4 bg-[#44474C] flex flex-col p-6">
               <span className="p-4 rounded-sm text-gray-400 text-sm mb-4">INSTALCIONES</span>
               <div className="flex flex-col gap-4 ">
-                <Title  label="Un entorno estéril para el rendimiento" className="px-4" />
+                <Title label="Un entorno estéril para el rendimiento" className="px-4" />
                 <p className='text-typography text-lg mt-4 px-4 mb-4'>
                   Nuestras instalaciones están diseñadas paraº
                   imitar un laboratorio aeroespacial. Superficies
@@ -156,7 +151,7 @@ const AboutPage: FC = () => {
                     <Title className="text-yellow-500 font-bold" label={tech.name} />
                     <strong className="text-sm font-black">{tech.role}</strong>
                     <p title={tech.experience} className="text-overflow truncate">{tech.experience}</p>
-                  </div> 
+                  </div>
                   <div className="grid grid-cols-3 auto-cols-[minmax(0,8rem)] gap-2 justify-between">
                     <strong className='col-span-full'>Especialidades:</strong>
                     {tech.specialties.map((specialty, idx) => (
