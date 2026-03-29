@@ -1,4 +1,4 @@
-import { useState, type FC} from 'react'
+import { useState, type FC } from 'react'
 import TitlePage from '@/components/TitlePage'
 import img from '@/assets/images/png/maestro_técnico_trabajando.png'
 import Container from '@/components/ui/Container'
@@ -13,10 +13,10 @@ type LegacyProps = { label: string, description: string, icon?: string }
 
 
 const AboutPage: FC = () => {
-  
-  
+
+
   const [items] = useState<LegacyProps[]>(ABOUT.history.story_elements)
-    
+
 
   const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='text-yellow-500'>ÚNICO ESTÁNDAR</span>")
   return (
@@ -64,14 +64,14 @@ const AboutPage: FC = () => {
                   rendimiento. Hoy, somos el referente de autoridad técnica.
                 </p>
               </div>
-             <div className='flex flex-col items-end justify-end gap-4'>
-               <i className='inline-flex text-gray-800 text-6xl font-black'>30+ AÑOS</i>
-             </div>
+              <div className='flex flex-col items-end justify-end gap-4'>
+                <i className='inline-flex text-gray-800 text-6xl font-black'>30+ AÑOS</i>
+              </div>
             </article>
             <article className='grid grid-cols-3 gap-8 pb-22'>
               {items.map((item, index) => (
                 <section key={index} className="mt-12 bg-[#0B1326] p-8 flex flex-col gap-4">
-                 <img src={item.icon} alt={item.label} width={26} height={26}/>
+                  <img src={item.icon} alt={item.label} width={26} height={26} />
                   <div>
                     <Title color="text-white" label={item.label} className='text-main' />
                     <p className='text-white text-lg mt-4'>
@@ -86,8 +86,17 @@ const AboutPage: FC = () => {
       </section>
       <section className="bg-[#0B1326]">
         <Container>
-          <section className="py-22 grid grid-flow-row auto-rows grid-cols-12 gap-4 bg-[#0B1326]">
-            <img className="row-1 col-span-8 w-full max-h-[512px] object-cover " src={entorno} alt="Entorno del taller" />
+          <section className="py-22 grid grid-flow-row grid-cols-12 gap-4 bg-[#0B1326]">
+            <div className="row-1 col-span-8 relative bg-black">
+              <img className="w-full max-h-[512px] object-cover " src={entorno} alt="Entorno del taller" />
+              <div className='absolute bottom-0 left-0 max-w-xl m-4'>
+                <i className='text-yellow-500 px-4'>{ABOUT.history.installations.badget.toUpperCase()}</i>
+                <Title size='lg' color="text-white" label={ABOUT.history.installations.label} className="px-4 mt-6" />
+                <p className='text-main text-2xl mt-4 px-4 mb-4'>
+                  {ABOUT.history.installations.description}
+                </p>
+              </div>
+            </div>
             <div className="row-1 col-span-4 bg-[#44474C] flex flex-col p-6">
               <span className="p-4 rounded-sm text-gray-400 text-sm mb-4">INSTALCIONES</span>
               <div className="flex flex-col gap-4 ">
@@ -106,7 +115,9 @@ const AboutPage: FC = () => {
                 </ul>
               </div>
             </div>
-            <img className="row-2 col-span-4 w-full object-cover" src={details} alt="Herramientas de alta gama" />
+            <div className='row-2 col-span-4 '>
+              <img className="w-[409px] max-h-[318px] object-cover" src={details} alt="Herramientas de alta gama" />
+            </div>
             <div className='row-2 col-span-8 '>asdasd</div>
           </section>
         </Container>

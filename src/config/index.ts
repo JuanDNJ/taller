@@ -1,6 +1,7 @@
 import LegacySvg from "@/assets/images/svg/legacy.svg"
 import PrecisionSvg from "@/assets/images/svg/precision.svg"
 import ShieldSvg from "@/assets/images/svg/ok.svg"
+import { getInstallations } from "firebase/installations"
 
 const TITLE_APP = 'Taller Cloe'
 const SUBTITLE_APP = 'Cuidado experto para tu vehículo'
@@ -135,7 +136,12 @@ const ABOUT = {
       description: 'Diseñamos soluciones a medida para cada vehículo, fusionando arte y ciencia automotriz.',
       icon: ShieldSvg
     }
-    ] as { label: string, description: string, icon: string }[]
+    ] as { label: string, description: string, icon: string }[],
+    installations: {
+      badget: 'Nuestra Misión',
+      label: 'Elevar el Cuidado Automotriz a un Oficio Técnico.',
+      description: 'Nuestro objetivo es eliminar la incertidumbre de la reparación mecánica mediante una documentación meticulosa, limpieza clínica y una experiencia inigualable.'
+    }
   }
 }
 
