@@ -4,11 +4,13 @@ import CurrentUser from '../../components/CurrentUser'
 import MenuMobile from '../../components/menus/MenuMobile'
 import MenuDesktop from '../../components/menus/MenuDesktop'
 import { NAME_APP, TITLE_APP, SUBTITLE_APP } from '../../config'
+import Container from '@/components/ui/Container'
 
 const Header: FC = () => {
   return (
     <header className="bg-header relative sticky top-0 z-50">
-      <section className="container mx-auto flex justify-between ">
+      <Container>
+        <section className="flex justify-between ">
         <section className="hidden lg:flex items-center" title={`${TITLE_APP} - ${SUBTITLE_APP}`}>
           <Brand label={NAME_APP} />
         </section>
@@ -16,6 +18,7 @@ const Header: FC = () => {
         <MenuDesktop />
         <CurrentUser />
       </section>
+      </Container>
     </header>
   )
 }
