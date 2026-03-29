@@ -1,35 +1,22 @@
-import { useState, type FC, type JSX } from 'react'
+import { useState, type FC} from 'react'
 import TitlePage from '@/components/TitlePage'
-import img from '@/assets/images/maestro_técnico_trabajando.png'
+import img from '@/assets/images/png/maestro_técnico_trabajando.png'
 import Container from '@/components/ui/Container'
 import Title from '@/components/Title'
-import entorno from '@/assets/images/entorno_taller.png'
-import details from '@/assets/images/herramientas_de_alta_gama.png'
-import LegacySvg from '@/components/ui/icons/LegacySvg'
-import PrecisionSvg from '@/components/ui/icons/PrecisionSvg'
+import entorno from '@/assets/images/png/entorno_taller.png'
+import details from '@/assets/images/png/herramientas_de_alta_gama.png'
+import { ABOUT } from '@/config'
 import OkSvg from '@/components/ui/icons/OkSvg'
-import ShieldSvg from '@/components/ui/icons/ShieldSvg'
 
-type LegacyProps = { title: string, description: string, icon?: JSX.Element }
+type LegacyProps = { label: string, description: string, icon?: string }
+
+
 
 const AboutPage: FC = () => {
-  const [items] = useState<LegacyProps[]>([
-    {
-      title: 'Taller de Precisión',
-      description: 'Donde la excelencia automotriz se encuentra con la precisión quirúrgica.',
-      icon: <LegacySvg />
-    },
-    {
-      title: 'Cuidado Experto',
-      description: 'Mecánica de grado quirúrgico para vehículos de lujo y alto rendimiento.',
-      icon: <PrecisionSvg />
-    },
-    {
-      title: 'Soluciones Personalizadas',
-      description: 'Diseñamos soluciones a medida para cada vehículo, fusionando arte y ciencia automotriz.',
-      icon: <ShieldSvg />
-    }
-  ])
+  
+  
+  const [items] = useState<LegacyProps[]>(ABOUT.history.story_elements)
+    
 
   const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='text-yellow-500'>ÚNICO ESTÁNDAR</span>")
   return (
@@ -84,9 +71,9 @@ const AboutPage: FC = () => {
             <article className='grid grid-cols-3 gap-8 pb-22'>
               {items.map((item, index) => (
                 <section key={index} className="mt-12 bg-[#0B1326] p-8 flex flex-col gap-4">
-                  <i className='mb-4'>{item.icon}</i>
+                 <img src={item.icon} alt={item.label} width={26} height={26}/>
                   <div>
-                    <Title color="text-white" label={item.title} className='text-main' />
+                    <Title color="text-white" label={item.label} className='text-main' />
                     <p className='text-white text-lg mt-4'>
                       {item.description}
                     </p>

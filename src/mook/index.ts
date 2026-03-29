@@ -1,6 +1,6 @@
-import avatar1 from '../assets/images/avatar1.png'
-import avatar3 from '../assets/images/avatar3.png'
-import avatar4 from '../assets/images/avatar4.png'
+import avatar1 from '../assets/images/png/avatar1.png'
+import avatar3 from '../assets/images/png/avatar3.png'
+import avatar4 from '../assets/images/png/avatar4.png'
 
 export type CustomerReviewProps = {
     comment: string;
@@ -12,7 +12,7 @@ export type CustomerReviewProps = {
 
 export const CoustomersReviews: CustomerReviewProps[] = [
   {
-    comment: 'Gracias al taller Juan Valdivia, pasé la ITV sin ningún problema. Su atención al detalle y profesionalismo son excepcionales. ¡Recomiendo sus servicios a todos los conductores!',
+    comment: 'Gracias al taller Cloe, pasé la ITV sin ningún problema. Su atención al detalle y profesionalismo son excepcionales. ¡Recomiendo sus servicios a todos los conductores!',
     avatar: avatar1,
     name: 'Maria Gomez',
     position: 'left-4',
@@ -26,7 +26,7 @@ export const CoustomersReviews: CustomerReviewProps[] = [
     color: 'text-green-500'
   },
   {
-    comment: 'El taller Juan Valdivia me ayudó a preparar mi coche para la ITV y el proceso fue muy fácil. Su equipo es muy profesional y se nota que saben lo que hacen.',
+    comment: 'El taller Cloe me ayudó a preparar mi coche para la ITV y el proceso fue muy fácil. Su equipo es muy profesional y se nota que saben lo que hacen.',
     avatar: avatar4,
     name: 'Ana Martinez',
     position: 'left-18',

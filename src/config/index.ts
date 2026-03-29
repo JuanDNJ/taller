@@ -1,3 +1,7 @@
+import LegacySvg from "@/assets/images/svg/legacy.svg"
+import PrecisionSvg from "@/assets/images/svg/precision.svg"
+import ShieldSvg from "@/assets/images/svg/ok.svg"
+
 const TITLE_APP = 'Taller Cloe'
 const SUBTITLE_APP = 'Cuidado experto para tu vehículo'
 const NAME_APP = 'Cloe'
@@ -104,9 +108,37 @@ const CONTACT = {
 }
 
 const ABOUT = {
-  label: 'Quienes Somos?',
-  description: 'En Taller Cloe, somos apasionados por la mecánica automotriz y nos dedicamos a brindar servicios de alta calidad para el cuidado de tu vehículo. Con años de experiencia en la industria, nuestro equipo de expertos está comprometido a ofrecer soluciones confiables y eficientes para mantener tu automóvil en óptimas condiciones. Desde mantenimiento preventivo hasta reparaciones complejas, en Taller Cloe nos esforzamos por superar tus expectativas y garantizar tu satisfacción en cada visita.'
+  hero: {
+    label: 'La Precisión es nuestro ÚNICO ESTÁNDAR',
+    description: 'En Taller CLOE, no solo reparamos vehículos; diseñamos soluciones. Con más de tres décadas de maestría en cuidado automotriz de alta gama, fusionamos la precisión quirúrgica con el poder industrial.',
+  },
+  workshop_specifications: {
+    label: 'Especificaciones del Taller',
+    description: 'Entornos de flujo de trabajo optimizados para una ejecución mecánica de grado quirúrgico.'
+  },
+  history: {
+    label: 'Nuestra Historia',
+    description: 'Fundado en el corazón de la excelencia industrial, Taller CLOE comenzó con un solo elevador y la visión de redefinir el mantenimiento automotriz para vehículos de lujo y alto rendimiento. Hoy, somos el referente de autoridad técnica.',
+    story_elements: [
+      {
+      label: 'Taller de Precisión',
+      description: 'Donde la excelencia automotriz se encuentra con la precisión quirúrgica.',
+      icon: LegacySvg
+    },
+    {
+      label: 'Cuidado Experto',
+      description: 'Mecánica de grado quirúrgico para vehículos de lujo y alto rendimiento.',
+      icon: PrecisionSvg
+    },
+    {
+      label: 'Soluciones Personalizadas',
+      description: 'Diseñamos soluciones a medida para cada vehículo, fusionando arte y ciencia automotriz.',
+      icon: ShieldSvg
+    }
+    ] as { label: string, description: string, icon: string }[]
+  }
 }
+
 
 const HERO_MOOK = {
   label: 'Taller Cloe cuidado experto para tu vehículo',
