@@ -122,29 +122,82 @@ const ABOUT = {
     description: 'Fundado en el corazón de la excelencia industrial, Taller CLOE comenzó con un solo elevador y la visión de redefinir el mantenimiento automotriz para vehículos de lujo y alto rendimiento. Hoy, somos el referente de autoridad técnica.',
     story_elements: [
       {
-      label: 'Taller de Precisión',
-      description: 'Donde la excelencia automotriz se encuentra con la precisión quirúrgica.',
-      icon: LegacySvg
-    },
-    {
-      label: 'Cuidado Experto',
-      description: 'Mecánica de grado quirúrgico para vehículos de lujo y alto rendimiento.',
-      icon: PrecisionSvg
-    },
-    {
-      label: 'Soluciones Personalizadas',
-      description: 'Diseñamos soluciones a medida para cada vehículo, fusionando arte y ciencia automotriz.',
-      icon: ShieldSvg
-    }
+        label: 'Taller de Precisión',
+        description: 'Donde la excelencia automotriz se encuentra con la precisión quirúrgica.',
+        icon: LegacySvg
+      },
+      {
+        label: 'Cuidado Experto',
+        description: 'Mecánica de grado quirúrgico para vehículos de lujo y alto rendimiento.',
+        icon: PrecisionSvg
+      },
+      {
+        label: 'Soluciones Personalizadas',
+        description: 'Diseñamos soluciones a medida para cada vehículo, fusionando arte y ciencia automotriz.',
+        icon: ShieldSvg
+      }
     ] as { label: string, description: string, icon: string }[],
     installations: {
-      badget: 'Nuestra Misión',
       label: 'Elevar el Cuidado Automotriz a un Oficio Técnico.',
-      description: 'Nuestro objetivo es eliminar la incertidumbre de la reparación mecánica mediante una documentación meticulosa, limpieza clínica y una experiencia inigualable.'
-    }
+      description: 'Nuestro objetivo es eliminar la incertidumbre de la reparación mecánica mediante una documentación meticulosa, limpieza clínica y una experiencia inigualable.',
+      images: {
+        workshop: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2hvcnNoaXAlMjB3b3Jrc2hvcHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
+        tools: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9vbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60'
+      },
+      badgets: {
+        label: 'Nuestra Misión',
+        completed_services: {
+          label: 'Servicios Completados',
+          count: '12K+'
+        },
+        complet: {
+          label: 'Maestros Técnicos',
+          technics: 4
+        },
+        diagnostics: {
+          label: 'Diagnósticos Realizados',
+          percent: '99%'
+
+        }
+      },
+    },
+
   }
 }
-
+const OUR_TECHNICIANS = {
+  label: 'Nuestros Técnicos',
+  description: 'Conoce a nuestro equipo de expertos técnicos, dedicados a brindar un cuidado excepcional a tu vehículo. Cada uno de nuestros técnicos es un maestro en su oficio, con años de experiencia en la reparación y mantenimiento de vehículos de lujo y alto rendimiento. Desde diagnósticos precisos hasta reparaciones meticulosas, nuestro equipo está comprometido a superar tus expectativas y garantizar que tu vehículo reciba el mejor cuidado posible.',
+  technicians: [
+    {
+      name: 'Juan Pérez',
+      role: 'Mecánico Principal',
+      experience: '15 años de experiencia en reparación de vehículos de lujo.',
+      specialties: ['Motores', 'Sistemas de frenos', 'Suspensión'],
+      image: 'https://randomuser.me/api/portraits/men/1.jpg',
+    },
+    {
+      name: 'María Gómez',
+      role: 'Técnica de Diagnóstico',
+      experience: '10 años de experiencia en diagnóstico avanzado.',
+      specialties: ['Diagnóstico de motores', 'Sistemas eléctricos', 'Tecnología de escaneo'],
+      image: 'https://randomuser.me/api/portraits/women/1.jpg',
+    },
+    {
+      name: 'Carlos Rodríguez',
+      role: 'Especialista en Mantenimiento',
+      experience: '12 años de experiencia en mantenimiento preventivo.',
+      specialties: ['Mantenimiento general', 'Sistemas de frenos', 'Calibración de seguridad'],
+      image: 'https://randomuser.me/api/portraits/men/2.jpg',
+    },
+    {
+      name: 'Laura Martínez',
+      role: 'Técnica de Reparación de Motores',
+      experience: '8 años de experiencia en reparación de motores.',
+      specialties: ['Reparación de motores', 'Piezas de calidad', 'Mano de obra especializada'],
+      image: 'https://randomuser.me/api/portraits/women/2.jpg',
+    }
+  ]
+}
 
 const HERO_MOOK = {
   label: 'Taller Cloe cuidado experto para tu vehículo',
@@ -188,7 +241,7 @@ const ITV_MOOK = {
 }
 
 export const CONFIG = {
-  TITLE_APP, SUBTITLE_APP, NAME_APP, ROOT_LAYOUT, TAGS_SIZE, TITLE_SIZE, MENU_LINKS, USEFUL_LINKS, HERO_MOOK, OURS_SERVICES_LINKS, SERVICE_MOOK, ITV_MOOK, CONTACT, ABOUT
+  TITLE_APP, SUBTITLE_APP, NAME_APP, ROOT_LAYOUT, TAGS_SIZE, TITLE_SIZE, MENU_LINKS, USEFUL_LINKS, OURS_SERVICES_LINKS, HERO_MOOK, SERVICE_MOOK, ITV_MOOK, CONTACT, ABOUT, OUR_TECHNICIANS
 }
 
-export { TITLE_APP, SUBTITLE_APP, NAME_APP, ROOT_LAYOUT, TAGS_SIZE, TITLE_SIZE, MENU_LINKS, USEFUL_LINKS, OURS_SERVICES_LINKS, HERO_MOOK, SERVICE_MOOK, ITV_MOOK, CONTACT, ABOUT }
+export { TITLE_APP, SUBTITLE_APP, NAME_APP, ROOT_LAYOUT, TAGS_SIZE, TITLE_SIZE, MENU_LINKS, USEFUL_LINKS, OURS_SERVICES_LINKS, HERO_MOOK, SERVICE_MOOK, ITV_MOOK, CONTACT, ABOUT, OUR_TECHNICIANS }

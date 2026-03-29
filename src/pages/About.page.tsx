@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container'
 import Title from '@/components/Title'
 import entorno from '@/assets/images/png/entorno_taller.png'
 import details from '@/assets/images/png/herramientas_de_alta_gama.png'
-import { ABOUT } from '@/config'
+import { ABOUT, OUR_TECHNICIANS } from '@/config'
 import OkSvg from '@/components/ui/icons/OkSvg'
 
 type LegacyProps = { label: string, description: string, icon?: string }
@@ -90,7 +90,7 @@ const AboutPage: FC = () => {
             <div className="row-1 col-span-8 relative bg-black">
               <img className="w-full max-h-[512px] object-cover " src={entorno} alt="Entorno del taller" />
               <div className='absolute bottom-0 left-0 max-w-xl m-4'>
-                <i className='text-yellow-500 px-4'>{ABOUT.history.installations.badget.toUpperCase()}</i>
+                <i className='text-yellow-500 px-4'>{ABOUT.history.installations.badgets.label.toUpperCase()}</i>
                 <Title size='lg' color="text-white" label={ABOUT.history.installations.label} className="px-4 mt-6" />
                 <p className='text-main text-2xl mt-4 px-4 mb-4'>
                   {ABOUT.history.installations.description}
@@ -118,8 +118,55 @@ const AboutPage: FC = () => {
             <div className='row-2 col-span-4 '>
               <img className="w-[409px] max-h-[318px] object-cover" src={details} alt="Herramientas de alta gama" />
             </div>
-            <div className='row-2 col-span-8 '>asdasd</div>
+            <div className='row-2 col-span-8 h-full flex items-center'>
+              {ABOUT.history.installations.badgets && (
+                <div className='flex items-center justify-between px-4 w-full'>
+                  <div className='flex flex-col gap-2'>
+                    <i className='text-yellow-500 text-4xl font-bold'>{ABOUT.history.installations.badgets.completed_services.count}</i>
+                    <span className='text-main text-lg'>{ABOUT.history.installations.badgets.completed_services.label}</span>
+                  </div>
+                  <div className='flex flex-col gap-2'>
+                    <i className='text-yellow-500 text-4xl font-bold'>{ABOUT.history.installations.badgets.complet.technics}</i>
+                    <span className='text-main text-lg'>{ABOUT.history.installations.badgets.complet.label}</span>
+                  </div>
+                  <div className='flex flex-col gap-2'>
+                    <i className='text-yellow-500 text-4xl font-bold'>{ABOUT.history.installations.badgets.diagnostics.percent}</i>
+                    <span className='text-main text-lg'>{ABOUT.history.installations.badgets.diagnostics.label}</span>
+                  </div>
+                </div>
+              )}
+            </div>
           </section>
+        </Container>
+      </section>
+      <section className="bg-[#0B1326] text-main">
+        <Container>
+          <Title color="text-white" label={OUR_TECHNICIANS.label} className="mb-12" />
+          <p>
+            {OUR_TECHNICIANS.description}
+          </p>
+          {/* Aquí puedes agregar la sección de técnicos si lo deseas */}
+          <div className='flex grid grid-flow-col auto-cols-[minmax(0,22rem)] md:gap-8 mt-12'>
+            {/* Por ejemplo, podrías mapear un array de técnicos similar a cómo se hizo con los elementos de la historia */}
+            {OUR_TECHNICIANS.technicians.map((tech, index) => (
+              <div key={index} className="flex flex-col gap-6 my-8 justify-between">
+                <img src={tech.image} alt={tech.name} className="w-full min-h-[9rem] max-h-[18rem] object-cover" />
+                <div className='flex flex-col gap-4'>
+                  <div className='flex flex-col gap-2 text-balance'>
+                    <Title className="text-yellow-500 font-bold" label={tech.name} />
+                    <strong className="text-sm text-blue-200">{tech.role}</strong>
+                    <p title={tech.experience} className="text-overflow truncate">{tech.experience}</p>
+                  </div> 
+                  <div className="grid grid-cols-3 auto-cols-[minmax(0,8rem)] gap-2 justify-between">
+                    <strong className='col-span-full'>Especialidades:</strong>
+                    {tech.specialties.map((specialty, idx) => (
+                      <span key={idx} className='text-main text-xs text-center rounded-sm border border-main/40 px-2 py-1'>{specialty}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
     </main>

@@ -36,7 +36,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: var(--dark-color);
+        --bg: var(--secondary-color);
         --bg-header: var(--black);
         --text: var(--light-color);
         --link: var(--light-color);
