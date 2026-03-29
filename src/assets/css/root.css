@@ -80,9 +80,14 @@
     --color-gradient-default: var(--linear-gradient-default);
     --color-typography: var(--typography);
     /* breakpoints */
-    --breakpoint-xxs: 320px;
+    --breakpoint-xxxs: 320px;
+    --breakpoint-xxs: 375px;
     --breakpoint-xs: 425px;
-
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
     /* font sizes */
     --text-xxs: 0.7rem;
     --text-xxs--line-height: calc(1 / 0.7);

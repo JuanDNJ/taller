@@ -11,13 +11,13 @@ const Header: FC = () => {
     <header className="bg-header relative sticky top-0 z-50">
       <Container>
         <section className="flex justify-between ">
-        <section className="hidden lg:flex items-center" title={`${TITLE_APP} - ${SUBTITLE_APP}`}>
-          <Brand label={NAME_APP} />
+          <section className="hidden lg:flex items-center" title={`${TITLE_APP} - ${SUBTITLE_APP}`}>
+            <Brand label={NAME_APP} />
+          </section>
+          <MenuMobile />
+          <MenuDesktop />
+          <CurrentUser />
         </section>
-        <MenuMobile />
-        <MenuDesktop />
-        <CurrentUser />
-      </section>
       </Container>
     </header>
   )

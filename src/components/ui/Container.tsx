@@ -6,13 +6,14 @@ type ContainerProps = {
     className?: string;
     style?: React.CSSProperties;
     onClick?: () => void;
+    variant?: 'full' | 'default';
 }
 
-const Container: FC<ContainerProps> = ({ children, tag = 'section', className = '', style, onClick }) => {
+const Container: FC<ContainerProps> = ({ children, tag = 'section', className = '', style, onClick, variant = 'default' }) => {
   const Tag = tag
   return createElement(
     Tag,
-    { className: `container mx-auto ${className}`, style, onClick },
+    { className: `${variant === 'full' ? 'w-full grid grid-flow-row auto-rows-max' : 'sm:container sm:mx-auto px-4'} ${className}`, style, onClick },
     children
   )
 }

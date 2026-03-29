@@ -8,8 +8,8 @@ const MenuMobile: FC = () => {
     setIsOpen(!isOpen)
   }
   return (
-    <section className="flex lg:hidden items-center ">
-      <FaBars className="text-menu-bars ml-4 text-2xl cursor-pointer" onClick={toggleMenu} />
+    <section className="flex lg:hidden items-center">
+      <FaBars className="text-menu-bars text-2xl cursor-pointer" onClick={toggleMenu} />
       <nav
         className={`flex lg:hidden bg-header z-100 ${isOpen ? 'absolute top-0 left-0 right-0' : 'hidden'}`}
       >

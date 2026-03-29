@@ -9,8 +9,14 @@ import Btn from './Btn'
 const CurrentUser = () => {
   const { user } = useAccount()
   const [isOpenUserMenu, setIsOpenUserMenu] = useState<boolean>(false)
+
+  const handleWorking = () => {
+    setIsOpenUserMenu(false)
+    alert('Funcionalidad en desarrollo')
+  }
+
   return (
-    <section className="relative flex gap-4 items-center justify-between rounded-md py-1  my-1 mr-4">
+    <section className="relative flex gap-4 items-center justify-between rounded-md py-1 my-1">
       {user
         ? (
           <>
@@ -37,14 +43,19 @@ const CurrentUser = () => {
               </article>
             )}
           </>
-          )
+        )
         : (
           <>
             {/* <SignInWithGoogle />  */}
-            <Btn className='border-transparent text-white bg-tertiary' label='Inicia Sesión' onClick={() => setIsOpenUserMenu(false)} />
-            <Btn className='border-secondary bg-secondary/20' label='Registrate' onClick={() => setIsOpenUserMenu(false)} />
+            <div className="hidden md:flex gap-2">
+              <Btn className='border-transparent text-white bg-tertiary' label='Inicia Sesión' onClick={handleWorking} />
+              <Btn className='border-secondary bg-secondary/20' label='Registrate' onClick={handleWorking} />
+            </div>
+            <div className="flex md:hidden">
+              <Btn className='border-transparent text-white bg-tertiary' label='Acceder' onClick={handleWorking} />
+            </div>
           </>
-          )}
+        )}
     </section>
   )
 }

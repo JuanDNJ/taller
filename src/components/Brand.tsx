@@ -7,7 +7,7 @@ type BrandProps = {
 
 const Brand: FC<BrandProps> = ({ label }) => {
   return (
-    <NavLink to="/" className="hover:underline text-brand text-xl sm:text-3xl font-bold px-4">
+    <NavLink to="/" className="hover:underline text-brand text-xl sm:text-3xl font-bold">
       {label}
     </NavLink>
   )
