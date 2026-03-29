@@ -22,7 +22,7 @@ const AboutPage: FC = () => {
   return (
    <main className='bg-main text-typography'>
       <section className='flex flex-col md:grid md:grid-cols-2'>
-        <article className='flex flex-col gap-4 justify-center md:px-16 '>
+        <article className='flex flex-col gap-4 justify-center p-4 md:px-16 '>
           <TitlePage label={uiTitle} />
           <section className="mt-8 px-4">
             <p className='text-3xl'>
