@@ -8,7 +8,7 @@ type BrandProps = {
 
 const Brand: FC<BrandProps> = ({ label, className }) => {
   return (
-    <NavLink to="/" className={`text-xl sm:text-5xl font-black ${className}`}  >
+    <NavLink to="/" className={`text-xl sm:text-5xl font-black ${className}`}>
       {label}
     </NavLink>
   )

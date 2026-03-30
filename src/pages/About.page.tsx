@@ -7,6 +7,9 @@ import entorno from '@/assets/images/png/entorno_taller.png'
 import details from '@/assets/images/png/herramientas_de_alta_gama.png'
 import { ABOUT, OUR_TECHNICIANS } from '@/config'
 import OkSvg from '@/components/ui/icons/OkSvg'
+import Banner from '@/components/Banner'
+import HeroTop from '@/components/HeroTop'
+import Btn from '@/components/Btn'
 
 type LegacyProps = { label: string, description: string, icon?: string }
 
@@ -158,6 +161,24 @@ const AboutPage: FC = () => {
             </section>
           ))}
         </article>
+      </Container>
+      <Container>
+        <HeroTop className='p-22 text-center bg-gray-500/10 my-22'>
+          <div className='max-w-3xl mx-auto'>
+            <Banner
+              label={'¿Listo para la Experiencia, en el Taller de CLOE?'}
+              description={`Únase a los cientos de propietarios 
+              que confían sus activos más preciados a nuestro 
+              cuidado quirúrgico. Su vehículo merece la mejor
+              mente de ingeniería disponible.`}
+            >
+              <footer className='flex justify-center mt-8 lg:py-12 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 '>
+                <Btn className="bg-tertiary border-transparent py-2 px-6 text-xl" label="Reserve su Servicio" onClick={() => console.log('Contact button clicked')} />
+                <Btn className="bg-white/20 border-white/10 py-2 px-6 text-xl" label="Ver flota Tecnica" onClick={() => console.log('Progress button clicked')} />
+              </footer>
+            </Banner>
+          </div>
+        </HeroTop>
       </Container>
     </Container>
   )

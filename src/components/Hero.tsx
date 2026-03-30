@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import TitlePage from './TitlePage'
 import Btn from './Btn'
-import Container from './ui/Container';
+import Container from './ui/Container'
 
 type HeroProps = {
     img: {

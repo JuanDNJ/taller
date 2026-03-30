@@ -41,7 +41,7 @@ const App: FC = () => {
               <div className="absolute top-0 left-0 flex flex-col gap-2 justify-center h-full w-full px-4 lg:px-20 bg-black/50">
                 <div className="flex flex-col lg:mb-12">
                   <Title className='text-2xl' label={SERVICE_MOOK.maintenance.label} color="text-yellow-500" />
-                  
+
                   <i className="hidden lg:inline absolute lg:top-4 lg:left-20 text-yellow-500">
                     <FaTools size={48} className="text-yellow-500" />
                   </i>
