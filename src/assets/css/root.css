@@ -29,8 +29,16 @@
     --menu-bars: #383838;
     --outline: #50f0c8;
 
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
     scrollbar-color: var(--primary-color) var(--light-color);
     scrollbar-width: thin;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-base);
+
     @media (max-width: 1024px) {
         font-size: 16px;
     }

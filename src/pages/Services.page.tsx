@@ -39,7 +39,7 @@ const ServicesPage: FC = () => {
                 </p>
               </div>
               <NavLink
-                to={'plans'}
+                to={'/about#history'}
                 className="group lg:text-lg hover:text-orange-400 inline-flex items-center gap-4 text-orange-200 lg:mt-2"
               >
                 Explorar los planes de mantenimiento

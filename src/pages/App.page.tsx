@@ -1,8 +1,7 @@
 import { useState, type FC } from 'react'
-import { NavLink } from 'react-router'
+import { Link, NavLink } from 'react-router'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaTools, FaRegPlayCircle } from 'react-icons/fa'
-
 import { CoustomersReviews, type CustomerReviewProps } from '../mook'
 import { HERO_MOOK, ITV_MOOK, SERVICE_MOOK } from '@/config'
 import heroImage from '@/assets/images/png/hero2.png'
@@ -13,12 +12,12 @@ import CustomerReview from '@/components/CustomerReview'
 import Hero from '@/components/Hero'
 import Aside from '@/components/Aside'
 import Title from '@/components/Title'
-import Container from '@/components/ui/Container'
+import Template from '@/components/ui/Template'
 const App: FC = () => {
   const [customersReviews] = useState<CustomerReviewProps[]>(CoustomersReviews)
 
   return (
-    <Container tag="main" variant="full" className='bg-main text-typography'>
+    <Template id="home" tag="main" container="full">
       {/* Hero */}
       <Hero img={{
         src: heroImage,
@@ -26,7 +25,7 @@ const App: FC = () => {
         alt: 'Imagen de un taller mecánico con un coche en el elevador y un mecánico trabajando en él'
       }} label={HERO_MOOK.label} description={HERO_MOOK.description} />
       {/* Servicios */}
-      <Container>
+      <Template id="services">
         <article className="my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4">
           <Aside>
             <Title size='lg' label={SERVICE_MOOK.title} tag="h2" />
@@ -52,13 +51,13 @@ const App: FC = () => {
                     {SERVICE_MOOK.maintenance.description}
                   </p>
                 </div>
-                <NavLink
-                  to={'plans'}
+                <Link
+                  to="about#technicians"
                   className="group lg:text-lg hover:text-orange-400 inline-flex items-center gap-4 text-orange-200 lg:mt-2"
                 >
                   Explorar los planes de mantenimiento
                   <BsArrowRight size={24} className="group-hover:text-blue-400" />
-                </NavLink>
+                </Link>
               </div>
             </article>
             <article className="lg:mt-8 px-6 py-12 bg-black relative flex flex-col gap-2 justify-center">
@@ -102,8 +101,8 @@ const App: FC = () => {
             </article>
           </section>
         </article>
-      </Container>
-      <Container>
+      </Template>
+      <Template id="itv">
         {/* ITV */}
         <article className="grid grid-flow-row md:grid-flow-col my-8">
           <section className="mt-8 px-4 flex flex-wrap items-center lg:col-span-2 gap-8 lg:gap-0">
@@ -159,6 +158,7 @@ const App: FC = () => {
                 className="w-full mt-4 px-4 py-2 rounded bg-input-bg text-input-text"
               ></textarea>
               <button
+
                 type="submit"
                 className="mt-4 px-4 py-2 bg-yellow-500 font-bold rounded"
               >
@@ -167,8 +167,8 @@ const App: FC = () => {
             </form>
           </section>
         </article>
-      </Container>
-    </Container>
+      </Template>
+    </Template>
   )
 }
 

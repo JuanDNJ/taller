@@ -29,9 +29,9 @@ const Hero: FC<HeroProps> = ({ img, label, description }) => {
                         <p className="md:text-3xl">
                             {description}
                         </p>
-                        <footer className="mt-8 lg:py-12 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
-                            <Btn className="text-xl text-white bg-tertiary border-transparent" label="Contáctanos" onClick={() => console.log('Contact button clicked')} />
-                            <Btn className="text-xl bg-white/20 text-white border-white/10" label="Ver tu proceso" onClick={() => console.log('Progress button clicked')} />
+                        <footer className="mt-8 lg:py-12 flex flex-col justify-end md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
+                            <Btn className="text-xl md:text-3xl bg-tertiary border-transparent hover:bg-tertiary/80 py-2 px-4" label="Contáctanos" onClick={() => console.log('Contact button clicked')} />
+                            <Btn className="text-xl md:text-3xl bg-yellow-500/10 border-yellow-500/50 hover:bg-yellow-500/20 py-2 px-4" label="Ver tu proceso" onClick={() => console.log('Progress button clicked')} />
                         </footer>
                     </article>
                 </section>

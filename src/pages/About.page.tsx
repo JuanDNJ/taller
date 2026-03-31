@@ -1,4 +1,4 @@
-import { useState, type FC } from 'react'
+import { useRef, useState, type FC } from 'react'
 import TitlePage from '@/components/TitlePage'
 import img from '@/assets/images/png/maestro_técnico_trabajando.png'
 import Container from '@/components/ui/Container'
@@ -15,26 +15,25 @@ type LegacyProps = { label: string, description: string, icon?: string }
 
 const AboutPage: FC = () => {
   const [items] = useState<LegacyProps[]>(ABOUT.history.story_elements)
-
   const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='text-yellow-500'>ÚNICO ESTÁNDAR</span>")
   return (
-    <Container tag="main" variant='full' className='bg-main text-typography'>
-      <article className='flex flex-col md:grid md:grid-cols-2'>
-        <section className='flex flex-col gap-4 justify-center p-4 md:px-16 '>
+    <Container id="about" tag="main" variant='full' className='bg-main text-typography'>
+      <article  className='flex flex-col xl:grid xl:grid-cols-2'>
+        <div className='flex flex-col gap-4 justify-center px-4 my-11 xl:px-9 xl:my-0'>
           <TitlePage label={uiTitle} />
-          <article className="mt-8 px-4">
-            <p className='text-3xl'>
+          <article>
+            <p className='text-xl md:text-3xl'>
               En Taller CLOE, no solo reparamos vehículos; diseñamos
               soluciones. Con más de tres décadas de maestría en cuidado
               automotriz de alta gama, fusionamos la precisión quirúrgica
               con el poder industrial.
             </p>
           </article>
-        </section>
+        </div>
         <section className='relative'>
           <img
             srcSet={`${img} 1x, ${img} 2x`}
-            className="md:w-[77dvw] h-screen object-cover"
+            className="w-full xl:w-[77dvw] h-screen object-cover"
             alt="Maestro técnico trabajando"
           />
           <article className=' bg-[#131B2E] absolute -bottom-0 md:-left-22 md:max-w-md p-8'>
@@ -50,7 +49,7 @@ const AboutPage: FC = () => {
           </article>
         </section>
       </article>
-      <Container>
+      <Container id="history">
         <article className="pt-24">
           <section className='md:grid md:grid-cols-2 gap-4 px-4'>
             <article className='flex flex-col '>
@@ -80,14 +79,14 @@ const AboutPage: FC = () => {
           </section>
         </article>
       </Container>
-      <Container>
-        <article className="flex flex-col md:py-22 md:grid md:grid-flow-row md:grid-cols-12 gap-4 px-4">
+      <Container id="installations">
+        <article className="flex flex-col xl:py-22 xl:grid xl:grid-flow-row xl:grid-cols-12 gap-4">
           <section className="row-1 col-span-8 relative">
             <img className="md:w-full md:max-h-[512px] object-cover " src={entorno} alt="Entorno del taller" />
-            <article className='absolute top-4 md:top-44  md:left-0 md:max-w-sm md:max-w-xl md:m-4'>
+            <article className='absolute top-1 xxs:top-8 xs:top-12 md:top-22 lg:top-44  lg:left-0 lg:max-w-sm lg:max-w-xl lg:m-4'>
               <i className='text-yellow-500 px-4'>{ABOUT.history.installations.badgets.label.toUpperCase()}</i>
-              <Title label={ABOUT.history.installations.label} className="px-4 mt-6 text-xl md:text-4xl" />
-              <p className='text-typography md:text-2xl mt-4 px-4 mb-4'>
+              <Title label={ABOUT.history.installations.label} className="px-4 xl:mt-6 text-xl md:text-4xl" />
+              <p className='text-typography text-xxs xs:text-xs sm:text-xl md:text-2xl xl:mt-4 px-4'>
                 {ABOUT.history.installations.description}
               </p>
             </article>
@@ -133,28 +132,27 @@ const AboutPage: FC = () => {
           </section>
         </article>
       </Container>
-      <Container className="py-22 px-4">
-        <article>
-          <Title size='xl' label={OUR_TECHNICIANS.label} className="py-12" />
+      <Container id="technicians">
+        <article className='md:max-w-6xl'>
+          <Title size='xl' label={OUR_TECHNICIANS.label} />
           <p className='text-xl'>
             {OUR_TECHNICIANS.description}
           </p>
         </article>
-        <article className='flex flex-col md:grid md:grid-flow-col md:auto-cols-[minmax(0,22rem)] md:gap-8 mt-12'>
-          {/* Por ejemplo, podrías mapear un array de técnicos similar a cómo se hizo con los elementos de la historia */}
+        <article className='flex flex-col md:flex-row md:flex-wrap gap-4 mt-8 justify-around'>
           {OUR_TECHNICIANS.technicians.map((tech, index) => (
-            <section key={index} className="flex flex-col gap-6 my-8 justify-between">
-              <img src={tech.image} alt={tech.name} className="w-full min-h-[9rem] max-h-[18rem] object-cover" />
+            <section key={index} className="w-full md:max-w-90 flex flex-col gap-6 my-8 justify-between">
+              <img src={tech.image} alt={tech.name} className="w-full min-h-[9rem] max-h-[18rem] aspect-[4/3] object-cover" />
               <article className='flex flex-col gap-4'>
                 <div className='flex flex-col gap-2 text-typography'>
                   <Title className="text-yellow-500 font-bold" label={tech.name} />
                   <strong className="text-sm font-black">{tech.role}</strong>
-                  <p title={tech.experience} className="text-overflow truncate">{tech.experience}</p>
+                  <p title={tech.experience} className="">{tech.experience}</p>
                 </div>
-                <div className="grid grid-cols-3 auto-cols-[minmax(0,8rem)] gap-2 justify-between">
+                <div className="flex flex-col md:grid md:grid-cols-3 gap-2 justify-between">
                   <strong className='col-span-full'>Especialidades:</strong>
                   {tech.specialties.map((specialty, idx) => (
-                    <span key={idx} className='text-typography text-xs text-center rounded-sm border border-cyan-500/50 px-2 py-1'>{specialty}</span>
+                    <span key={idx} className='text-typography text-xs text-center rounded-sm border border-cyan-500/50 py-1'>{specialty}</span>
                   ))}
                 </div>
               </article>
@@ -162,8 +160,8 @@ const AboutPage: FC = () => {
           ))}
         </article>
       </Container>
-      <Container>
-        <HeroTop className='p-22 text-center bg-gray-500/10 my-22'>
+      <Container id="experience">
+        <HeroTop className='py-8 md:p-22 text-center bg-gray-500/10 my-22'>
           <div className='max-w-3xl mx-auto'>
             <Banner
               label={'¿Listo para la Experiencia, en el Taller de CLOE?'}
