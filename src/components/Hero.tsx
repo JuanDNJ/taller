@@ -7,7 +7,7 @@ type HeroProps = {
 
 const Hero: FC<HeroProps> = ({ children }) => {
   return (
-        <Container variant='full' className="relative h-full max-h-[95vh]" >
+        <Container variant='full' className="relative h-screen" >
             {children}
         </Container>
   )

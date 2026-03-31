@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import img from '@/assets/images/png/maestro_técnico_trabajando.png'
-import Container from '@/components/ui/Container'
+import Template from '@/components/ui/Template'
 import Title from '@/components/Title'
 import HistoryTemplate from '@/components/templates/HistoryTemplate'
 import IstalationsTemplate from '@/components/templates/InstallationsTemplate'
@@ -10,7 +10,7 @@ import ExperienceTemplate from '@/components/templates/ExperienceTemplate'
 const AboutPage: FC = () => {
   const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='block text-yellow-500 text-5xl xl:text-6xl'>ÚNICO ESTÁNDAR</span>")
   return (
-    <Container id="about" tag="main" variant='full' className='bg-main text-typography'>
+    <Template id="about" tag="main" container='full'>
       <article className='flex flex-col xl:grid xl:grid-cols-2'>
         <div className='flex flex-col gap-4 justify-center px-4 my-11 xl:px-9 xl:my-0'>
           <h1 className='text-4xl xl:text-5xl font-bold' dangerouslySetInnerHTML={{ __html: uiTitle }} />
@@ -46,7 +46,7 @@ const AboutPage: FC = () => {
       <IstalationsTemplate />
       <TechniciansTemplate />
       <ExperienceTemplate />
-    </Container>
+    </Template>
   )
 }
 
