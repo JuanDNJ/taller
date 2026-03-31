@@ -8,13 +8,13 @@ type TitlePageProps = {
 
 const TitlePage: FC<TitlePageProps> = ({ label, tag, className }) => {
   label = label
-    .replace('Taller Cloe', "<p class='text-bg'>Taller Cloe</p>")
+    .replace('Taller Cloe', "<span class='text-cyan-200 block'>Taller Cloe</span>")
     .replace('cuidado experto', "<span class='text-yellow-500'>CUIDADO EXPERTO</span>")
 
   const Tag = tag || 'h1'
   return (
     <Tag
-      className={`text-4xl md:text-6xl lg:text-6xl font-bold ${className}`}
+      className={`text-typography text-4xl md:text-6xl lg:text-6xl font-bold ${className}`}
       dangerouslySetInnerHTML={{ __html: label }}
     />
   )

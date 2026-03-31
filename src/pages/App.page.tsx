@@ -30,15 +30,15 @@ const App: FC = () => {
           <Aside>
             <Title size='lg' label={SERVICE_MOOK.title} tag="h2" />
           </Aside>
-          <section className="flex flex-col lg:flex-row justify-between gap-4 col-span-2">
-            <article className="lg:mt-8 w-full relative bg-black/50">
+          <section className="flex flex-col xl:flex-row gap-4 col-span-2">
+            <article className="flex-2 flex relative">
               <img
                 srcSet={`${generalMaintenance} 1x, ${generalMaintenance} 2x`}
                 className="w-full h-auto object-cover aspect-video"
                 alt="image description"
               />
-              <div className="absolute top-0 left-0 flex flex-col gap-2 justify-center h-full w-full px-4 lg:px-20 bg-black/50">
-                <div className="flex flex-col lg:mb-12">
+              <div className="absolute top-0 left-0 flex flex-col gap-2 justify-center h-full w-full px-4 lg:px-20 bg-black/30">
+                <div className="flex flex-col lg:mb-12 ">
                   <Title className='text-2xl' label={SERVICE_MOOK.maintenance.label} color="text-yellow-500" />
 
                   <i className="hidden lg:inline absolute lg:top-4 lg:left-20 text-yellow-500">
@@ -60,13 +60,12 @@ const App: FC = () => {
                 </Link>
               </div>
             </article>
-            <article className="lg:mt-8 px-6 py-12 bg-black relative flex flex-col gap-2 justify-center">
-              <FaRegPlayCircle size={32} className="absolute top-8 left-4 text-yellow-500" />
-              <div className="flex flex-col gap-4">
-                <video className="w-full max-h-72" src={mp4Frenos} controls></video>
-                <div className="flex flex-col gap-2 bg-black/50 p-4">
-                  <h3 className="text-xl lg:text-2xl font-bold text-white">{SERVICE_MOOK.brakes.label}</h3>
-                  <p className="text-white">
+            <article className="flex-1 flex relative border-2 rounded border-yellow-500/30 overflow-hidden">
+              <div className="grid grid-flow-rows gap-4 h-full">
+                <video className="aspect-video h-full bg-black" src={mp4Frenos} controls></video>
+                <div className="bg-red-500flex flex-col justify-center gap-º2 p-4">
+                  <h3 className="xl:pt-4 text-xl xl:text-3xl font-bold">{SERVICE_MOOK.brakes.label}</h3>
+                  <p className='xl:pt-4'>
                     {SERVICE_MOOK.brakes.description}
                   </p>
                 </div>
@@ -74,22 +73,22 @@ const App: FC = () => {
             </article>
           </section>
           <section className="flex flex-col lg:flex-row gap-4 col-span-2">
-            <article className="px-4 bg-gray-800 flex items-center  lg:px-14">
+            <article className="px-4 flex items-center border-2 rounded border-yellow-500/30 lg:px-14">
               <div className="flex flex-col gap-4 py-8">
-                <h2 className="text-xl lg:text-4xl font-bold mb-4 text-white">
+                <h2 className="text-xl lg:text-4xl font-bold mb-4">
                   {SERVICE_MOOK.diagnostics.label}
                 </h2>
-                <p className="text-white lg:text-xl">
+                <p className="lg:text-xl">
                   {SERVICE_MOOK.diagnostics.description}
                 </p>
               </div>
             </article>
-            <article className="flex flex-col lg:flex-row items-center lg:px-14 gap-8 lg:gap-16 bg-gray-800 min-h-80">
+            <article className="flex flex-col lg:flex-row items-center lg:px-14 gap-8 lg:gap-16 border-2 rounded border-yellow-500/30 min-h-80">
               <div className="w-full flex flex-col justify-center gap-4 p-4">
-                <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-white">
+                <h2 className="text-2xl lg:text-4xl font-bold mb-4">
                   {SERVICE_MOOK.engine_repair.label}
                 </h2>
-                <p className="text-white lg:text-xl">
+                <p className="lg:text-xl">
                   {SERVICE_MOOK.engine_repair.description}
                 </p>
               </div>
