@@ -1,5 +1,4 @@
 import { useState, type FC } from 'react'
-import TitlePage from '@/components/TitlePage'
 import img from '@/assets/images/png/maestro_técnico_trabajando.png'
 import Container from '@/components/ui/Container'
 import Title from '@/components/Title'
@@ -15,12 +14,12 @@ type LegacyProps = { label: string, description: string, icon?: string }
 
 const AboutPage: FC = () => {
   const [items] = useState<LegacyProps[]>(ABOUT.history.story_elements)
-  const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='text-yellow-500'>ÚNICO ESTÁNDAR</span>")
+  const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='block text-yellow-500 text-5xl xl:text-6xl'>ÚNICO ESTÁNDAR</span>")
   return (
     <Container id="about" tag="main" variant='full' className='bg-main text-typography'>
       <article className='flex flex-col xl:grid xl:grid-cols-2'>
         <div className='flex flex-col gap-4 justify-center px-4 my-11 xl:px-9 xl:my-0'>
-          <TitlePage label={uiTitle} className='text-black' />
+          <h1 className='text-4xl xl:text-5xl font-bold' dangerouslySetInnerHTML={{ __html: uiTitle }} />
           <article>
             <p className='text-xl md:text-3xl'>
               En Taller CLOE, no solo reparamos vehículos; diseñamos

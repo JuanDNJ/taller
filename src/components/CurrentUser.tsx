@@ -41,8 +41,8 @@ const CurrentUser = () => {
         )}</>)}
       {!user && (<>
         {/* <SignInWithGoogle />  */} <div className="hidden md:flex md:gap-2">
-          <Btn className='border-transparent bg-tertiary py-1 px-3' label='Inicia Sesión' onClick={handleWorking} />
-          <Btn className='border-secondary bg-secondary/20 py-1 px-3' label='Registrate' onClick={handleWorking} />
+          <Btn className='border-transparent bg-gray-600 hover:bg-tertiary/80 py-1 px-3 text-white' label='Inicia Sesión' onClick={handleWorking} />
+          <Btn className='border-gray-600 bg-gray-50 hover:bg-gray-200 text-gray-800 py-1 px-3' label='Registrate' onClick={handleWorking} />
         </div>
         <div className="flex md:hidden">
           <Btn className='border-transparent bg-tertiary py-1 px-3' label='Acceder' onClick={handleWorking} />
