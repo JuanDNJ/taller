@@ -36,7 +36,7 @@ const AboutPage: FC = () => {
             className="w-full xl:w-[77dvw] h-screen object-cover"
             alt="Maestro técnico trabajando"
           />
-          <article className=' bg-[#131B2E] absolute -bottom-0 md:-left-22 md:max-w-md p-8'>
+          <article className='bg-main/80 absolute -bottom-0  xl:-left-56 md:max-w-md px-4 xl:px-8 py-8'>
             <Title color="text-yellow-500" label="Especificaciones del Taller" />
             <div className="mt-8">
               <p className='text-white text-xl'>
@@ -51,7 +51,7 @@ const AboutPage: FC = () => {
       </article>
       <Container id="history">
         <article className="pt-24">
-          <section className='md:grid md:grid-cols-2 gap-4 px-4'>
+          <section className='md:grid md:grid-cols-2 gap-4'>
             <article className='flex flex-col '>
               <Title size='xl' label="Nuestra Historia" />
               <p className='text-typography text-xl mt-4'>
@@ -64,7 +64,7 @@ const AboutPage: FC = () => {
               <i className='inline-flex text-gray-800 text-6xl font-black'>30+ AÑOS</i>
             </article>
           </section>
-          <section className='md:grid md:grid-cols-3 gap-8 md:pb-22 px-4'>
+          <section className='md:grid md:grid-cols-3 gap-8 md:pb-22'>
             {items.map((item, index) => (
               <article key={index} className="mt-12 bg-[#0B1326] p-8 flex flex-col gap-4">
                 <img src={item.icon} alt={item.label} width={26} height={26} />
