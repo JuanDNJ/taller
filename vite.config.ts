@@ -13,5 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     tsconfigPaths: true
+  },
+  build: {
+    chunkSizeWarningLimit: 1000 // en kB
   }
 })
