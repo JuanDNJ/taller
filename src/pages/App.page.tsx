@@ -104,27 +104,27 @@ const App: FC = () => {
       </Template>
       <Template id="itv">
         {/* ITV */}
-        <article className="grid grid-flow-row md:grid-flow-col my-8">
-          <section className="mt-8 px-4 flex flex-wrap items-center lg:col-span-2 gap-8 lg:gap-0">
+        <article className="grid grid-flow-row md:grid-flow-col my-8 gap-4 xl:gap-22">
+          <section className="mt-8 flex flex-wrap items-center lg:col-span-2 gap-8 lg:gap-0">
             <article className="flex flex-col gap-4">
               <Title label={ITV_MOOK.label} tag="h2" size="lg" />
               <p className="text-paragraph">
                 {ITV_MOOK.description}
               </p>
             </article>
-            <article className="w-full lg:max-w-md bg-title rounded-sm lg:rounded-xl p-4 flex gap-8 relative">
-              <div className="min-w-26 flex items-center gap-4">
+            <article className="w-full lg:max-w-md bg-title rounded-sm lg:rounded-xl py-4 flex gap-8 relative">
+              <div className="flex items-center gap-4">
                 {customersReviews.map((review, index) => (
                   <CustomerReview key={index} {...review} />
                 ))}
 
               </div>
               <div className='flex items-center'>
-                <span className="xxs:text-xs xs:text-sm sm:text-lg m :text-xl text-link">Lo que dicen nuestros clientes</span>
+                <span className="xxs:text-xs xs:text-sm sm:text-lg md:text-xl text-link">Lo que dicen nuestros clientes</span>
               </div>
             </article>
           </section>
-          <section className="mt-8 px-4">
+          <section className="mt-8">
             <Title label={ITV_MOOK.book_an_appointment.label} tag="h2" size="lg" />
             <span className="text-paragraph">
               {ITV_MOOK.book_an_appointment.description}
