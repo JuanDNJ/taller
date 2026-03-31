@@ -1,5 +1,5 @@
 import { useState, type FC } from 'react'
-import { Link, NavLink } from 'react-router'
+import { Link } from 'react-router'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaTools, FaRegPlayCircle } from 'react-icons/fa'
 import { CoustomersReviews, type CustomerReviewProps } from '../mook'

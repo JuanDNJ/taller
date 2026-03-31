@@ -1,9 +1,9 @@
 import LegacySvg from '@/assets/images/svg/legacy.svg'
 import PrecisionSvg from '@/assets/images/svg/precision.svg'
 import ShieldSvg from '@/assets/images/svg/ok.svg'
-import especialista_electrónica from"@/assets/images/png/especialista_electrónica.png" 
-import especialista_mecanico from"@/assets/images/png/expecialista_mecanico.png" 
-import mecanico_trabajando from"@/assets/images/png/mecánico_trabajando.png"
+import especialistaElectrónica from '@/assets/images/png/especialista_electrónica.png'
+import especialistaMecanico from '@/assets/images/png/expecialista_mecanico.png'
+import mecanicoTrabajando from '@/assets/images/png/mecánico_trabajando.png'
 
 const TITLE_APP = 'Taller Cloe'
 const SUBTITLE_APP = 'Cuidado experto para tu vehículo'
@@ -175,28 +175,28 @@ const OUR_TECHNICIANS = {
       role: 'Mecánico Principal',
       experience: '15 años de experiencia en reparación de vehículos de lujo.',
       specialties: ['Motores', 'Sistemas de frenos', 'Suspensión'],
-      image: especialista_electrónica
+      image: especialistaElectrónica
     },
     {
       name: 'María Gómez',
       role: 'Técnica de Diagnóstico',
       experience: '10 años de experiencia en diagnóstico avanzado.',
       specialties: ['Diagnóstico de motores', 'Sistemas eléctricos', 'Tecnología de escaneo'],
-      image: especialista_mecanico
+      image: especialistaMecanico
     },
     {
       name: 'Carlos Rodríguez',
       role: 'Especialista en Mantenimiento',
       experience: '12 años de experiencia en mantenimiento preventivo.',
       specialties: ['Mantenimiento general', 'Sistemas de frenos', 'Calibración de seguridad'],
-      image: mecanico_trabajando
+      image: mecanicoTrabajando
     },
     {
       name: 'Laura Martínez',
       role: 'Técnica de Reparación de Motores',
       experience: '8 años de experiencia en reparación de motores.',
       specialties: ['Reparación de motores', 'Piezas de calidad', 'Mano de obra especializada'],
-      image: especialista_mecanico
+      image: especialistaMecanico
     }
   ]
 }

@@ -12,7 +12,6 @@ type HeroTopProps = {
 }
 
 const HeroTop: FC<HeroTopProps> = ({ img, className, children }) => {
-   
   return (
         <Container variant='full' className={`${img ? 'relative h-screen' : ''} ${className}`} >
             {img && (

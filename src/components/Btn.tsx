@@ -6,8 +6,7 @@ type BtnProps = {
     onClick?: () => void;
 }
 
-const Btn: FC<BtnProps> = ({ label,  className, onClick }) => {
-
+const Btn: FC<BtnProps> = ({ label, className, onClick }) => {
   return (
         <button onClick={onClick} className={`border-2 rounded-sm ${className}`}>
             {label}

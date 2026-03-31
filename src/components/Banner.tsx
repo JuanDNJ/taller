@@ -1,5 +1,5 @@
-import type { FC } from "react";
-import TitlePage from "./TitlePage"
+import type { FC } from 'react'
+import TitlePage from './TitlePage'
 
 type BannerProps = {
     label: string;
@@ -8,8 +8,7 @@ type BannerProps = {
 }
 
 const Banner: FC<BannerProps> = ({ label, description, children }) => {
-
-    return (
+  return (
         <section className="flex flex-col">
             <TitlePage tag="h1" label={label} className="text-yellow-500"/>
             <article className="mt-8">
@@ -19,7 +18,7 @@ const Banner: FC<BannerProps> = ({ label, description, children }) => {
                 {children}
             </article>
         </section>
-    )
+  )
 }
 
 export default Banner

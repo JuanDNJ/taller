@@ -1,4 +1,4 @@
-import { useRef, useState, type FC } from 'react'
+import { useState, type FC } from 'react'
 import TitlePage from '@/components/TitlePage'
 import img from '@/assets/images/png/maestro_técnico_trabajando.png'
 import Container from '@/components/ui/Container'
@@ -18,7 +18,7 @@ const AboutPage: FC = () => {
   const uiTitle = ('La Precisión es nuestro único Estándar').replace('único Estándar', "<span class='text-yellow-500'>ÚNICO ESTÁNDAR</span>")
   return (
     <Container id="about" tag="main" variant='full' className='bg-main text-typography'>
-      <article  className='flex flex-col xl:grid xl:grid-cols-2'>
+      <article className='flex flex-col xl:grid xl:grid-cols-2'>
         <div className='flex flex-col gap-4 justify-center px-4 my-11 xl:px-9 xl:my-0'>
           <TitlePage label={uiTitle} />
           <article>
