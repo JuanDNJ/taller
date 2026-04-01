@@ -12,7 +12,7 @@ const Header: FC = () => {
       <Container>
         <section className="flex justify-between ">
           <section className="hidden lg:flex items-center" title={`${TITLE_APP} - ${SUBTITLE_APP}`}>
-            <Brand label={NAME_APP} className='text-yellow-500'/>
+            <Brand label={NAME_APP} className='text-[#94201E]'/>
           </section>
           <MenuMobile />
           <MenuDesktop />
