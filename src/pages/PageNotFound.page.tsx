@@ -1,4 +1,4 @@
-import GoTo from '@/components/GoTo'
+import GoTo from '@/components/atoms/GoTo'
 
 const PageNotFound: React.FC = () => {
   return (

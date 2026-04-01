@@ -1,8 +1,8 @@
 import type { FC } from 'react'
-import Container from '@/components/ui/Container'
-import HeroTop from '@/components/HeroTop'
-import Banner from '@/components/Banner'
-import Btn from '@/components/Btn'
+import Container from '@/components/atoms/Container'
+import HeroTop from '@/components/molecules/HeroTop'
+import Banner from '@/components/molecules/Banner'
+import Btn from '@/components/atoms/Btn'
 
 const ExperienceTemplate: FC = () => {
   return (

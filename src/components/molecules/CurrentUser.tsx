@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useAccount } from '@/context/hooks/useAccount'
-import Avatar from '@/components/Avatar'
-import LogOutOfGoogle from '@/components/LogOutOfGoogle'
+import Avatar from '@/components/atoms/Avatar'
+import LogOutOfGoogle from '@/components/molecules/LogOutOfGoogle'
 // import SignInWithGoogle from '@/components/SignInWithGoogle'
 import { NavLink } from 'react-router'
-import Btn from '@/components/Btn'
+import Btn from '@/components/atoms/Btn'
 
 const CurrentUser = () => {
   const { user } = useAccount()

@@ -5,10 +5,10 @@ import { FaTools, FaRegPlayCircle } from 'react-icons/fa'
 import engineRepair from '@/assets/images/png/engine_repair.png'
 import generalMaintenance from '@/assets/images/png/general_maintenance.png'
 import mp4Frenos from '@/assets/mp4/Generación_de_Video_Sistema_de_Frenos.mp4'
-import Aside from '@/components/Aside'
+import Aside from '@/components/atoms/Aside'
 import Title from '@/components/atoms/Title'
 import { SERVICE_MOOK } from '@/config'
-import Container from '@/components/ui/Container'
+import Container from '@/components/atoms/Container'
 
 const ServicesPage: FC = () => {
   return (

@@ -2,7 +2,7 @@ import { type FC } from 'react'
 import Welcome from '@/components/templates/Welcome'
 import ServicesTemplate from '@/components/templates/ServicesTemplate'
 import ItvTemplate from '@/components/templates/ItvTemplate'
-import Template from '@/components/ui/Template'
+import Template from '@/components/molecules/Template'
 
 const App: FC = () => {
   return (

@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import img from '@/assets/images/png/maestro_técnico_trabajando.png'
-import Template from '@/components/ui/Template'
+import Template from '@/components/molecules/Template'
 import Title from '@/components/atoms/Title'
 import HistoryTemplate from '@/components/templates/HistoryTemplate'
 import IstalationsTemplate from '@/components/templates/InstallationsTemplate'

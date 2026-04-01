@@ -1,10 +1,10 @@
 import type { FC } from 'react'
-import Brand from '@/components/Brand'
-import CurrentUser from '@/components/CurrentUser'
+import Brand from '@/components/atoms/Brand'
+import CurrentUser from '@/components/molecules/CurrentUser'
 import MenuMobile from '@/components/molecules/menus/MenuMobile'
 import MenuDesktop from '@/components/molecules/menus/MenuDesktop'
 import { NAME_APP, TITLE_APP, SUBTITLE_APP } from '@/config'
-import Container from '@/components/ui/Container'
+import Container from '@/components/atoms/Container'
 
 const Header: FC = () => {
   return (

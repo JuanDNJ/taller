@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import Container from '@/components/ui/Container'
+import Container from '@/components/atoms/Container'
 import { OUR_TECHNICIANS } from '@/config'
 import Title from '@/components/atoms/Title'
 

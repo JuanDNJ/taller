@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import { FaGithubAlt, FaGoogle, FaShareAlt } from 'react-icons/fa'
 import { NavLink } from 'react-router'
 import { CONTACT, OURS_SERVICES_LINKS, TITLE_APP, USEFUL_LINKS } from '@/config'
-import P from '@/components/P'
+import P from '@/components/atoms/P'
 
 const Footer: FC = () => {
   return (

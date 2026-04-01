@@ -1,5 +1,5 @@
 import { useState, type FC } from 'react'
-import Container from '@/components/ui/Container'
+import Container from '@/components/atoms/Container'
 import Title from '@/components/atoms/Title'
 import { ABOUT } from '@/config'
 

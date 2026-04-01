@@ -1,9 +1,9 @@
 import type { FC } from 'react'
-import Container from '@/components/ui/Container'
+import Container from '@/components/atoms/Container'
 import Title from '@/components/atoms/Title'
 import { ABOUT } from '@/config'
 import entorno from '@/assets/images/png/entorno_taller.png'
-import OkSvg from '@/components/ui/icons/OkSvg'
+import OkSvg from '@/components/atoms/icons/OkSvg'
 import details from '@/assets/images/png/herramientas_de_alta_gama.png'
 
 const IstalationsTemplate: FC = () => {

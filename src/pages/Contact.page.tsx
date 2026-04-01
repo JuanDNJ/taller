@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import Title from '@/components/atoms/Title'
-import Template from '@/components/ui/Template'
-import Container from '@/components/ui/Container'
+import Template from '@/components/molecules/Template'
+import Container from '@/components/atoms/Container'
 
 const ContactPage: FC = () => {
   return (
