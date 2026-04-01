@@ -44,25 +44,23 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #0B1326;
-        --bg-header: var(--black);
-        --text: var(--light-color);
-        --link: var(--light-color);
-        --paragraph: var(--light-color);
-        --typography: #cbcbcb;
-        --title: var(--primary-color);
-        --bg-form: var(--light-color);
-        --bg-input: var(--dark-color);
-        --text-input: var(--light-color);
-        --info: var(--info);
-        --warning: var(--warning);
-        --menu-bars: var(--light-color);
-        --outline: var(--light-color);
-        --brand: rgb(42, 179, 233);
-        --linear-gradient-default: #000000;
-    }
+.dark {
+    --bg: #0B1326;
+    --bg-header: var(--black);
+    --text: var(--light-color);
+    --link: var(--light-color);
+    --paragraph: var(--light-color);
+    --typography: #cbcbcb;
+    --title: var(--primary-color);
+    --bg-form: var(--light-color);
+    --bg-input: var(--dark-color);
+    --text-input: var(--light-color);
+    --info: var(--info);
+    --warning: var(--warning);
+    --menu-bars: var(--light-color);
+    --outline: var(--light-color);
+    --brand: rgb(42, 179, 233);
+    --linear-gradient-default: #000000;
 }
 
 @theme {
