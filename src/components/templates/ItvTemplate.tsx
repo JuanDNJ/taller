@@ -1,9 +1,9 @@
 import { useState, type FC } from 'react'
-import Template from '../ui/Template'
+import Template from '@/components/ui/Template'
 import { ITV_MOOK } from '@/config'
-import { CoustomersReviews, type CustomerReviewProps } from '../../mook'
-import CustomerReview from '../CustomerReview'
-import Title from '../Title'
+import { CoustomersReviews, type CustomerReviewProps } from '@/mook'
+import CustomerReview from '@/components/CustomerReview'
+import Title from '@/components/atoms/Title'
 const ItvTemplate:FC = () => {
   const [customersReviews] = useState<CustomerReviewProps[]>(CoustomersReviews)
   return (

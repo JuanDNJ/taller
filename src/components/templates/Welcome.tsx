@@ -1,8 +1,8 @@
 import heroImage from '@/assets/images/png/hero2.png'
-import TallerCloe from '../TallerCloe'
+import TallerCloe from '@/components/atoms/TallerCloe'
 import { HERO_MOOK } from '@/config'
-import Btn from '../Btn'
-import Hero from '../Hero'
+import Btn from '@/components/Btn'
+import Hero from '@/components/Hero'
 const Welcome = () => {
   return (
         <Hero>

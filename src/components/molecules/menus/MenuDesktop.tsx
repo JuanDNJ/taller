@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import Menu from './Menu'
+import Menu from '@/components/molecules/menus/Menu'
 
 const MenuDesktop: FC = () => {
   return (

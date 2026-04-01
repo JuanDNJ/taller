@@ -2,8 +2,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import type { FC } from 'react'
 import { Outlet } from 'react-router'
 import { ToastContainer } from 'react-toastify'
-import Header from './Header'
-import Footer from './Footer'
+import Header from '@/pages/layouts/Header'
+import Footer from '@/pages/layouts/Footer'
 
 const PublicLayout: FC = () => {
   return (

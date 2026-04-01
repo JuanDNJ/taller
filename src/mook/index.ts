@@ -1,6 +1,6 @@
-import avatar1 from '../assets/images/png/avatar1.png'
-import avatar3 from '../assets/images/png/avatar3.png'
-import avatar4 from '../assets/images/png/avatar4.png'
+import avatar1 from '@/assets/images/png/avatar1.png'
+import avatar3 from '@/assets/images/png/avatar3.png'
+import avatar4 from '@/assets/images/png/avatar4.png'
 
 export type CustomerReviewProps = {
     comment: string;

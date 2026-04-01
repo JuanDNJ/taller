@@ -1,6 +1,6 @@
 import { FaBars } from 'react-icons/fa'
 import { useState, type FC } from 'react'
-import Menu from './Menu'
+import Menu from '@/components/molecules/menus/Menu'
 
 const MenuMobile: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)

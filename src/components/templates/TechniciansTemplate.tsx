@@ -1,7 +1,7 @@
 import type { FC } from 'react'
-import Container from '../ui/Container'
+import Container from '@/components/ui/Container'
 import { OUR_TECHNICIANS } from '@/config'
-import Title from '../Title'
+import Title from '@/components/atoms/Title'
 
 const TechniciansTemplate: FC = () => {
   return (

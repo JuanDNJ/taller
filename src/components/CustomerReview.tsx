@@ -1,5 +1,5 @@
 import { useRef, useState, type FC } from 'react'
-import type { CustomerReviewProps } from '../mook'
+import type { CustomerReviewProps } from '@/mook'
 
 const CustomerReview: FC<CustomerReviewProps> = ({ comment, avatar, name, position, color }) => {
   const [isActive, setIsActive] = useState(false)

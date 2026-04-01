@@ -1,9 +1,9 @@
 import type { FC } from 'react'
-import Brand from '../../components/Brand'
-import CurrentUser from '../../components/CurrentUser'
-import MenuMobile from '../../components/menus/MenuMobile'
-import MenuDesktop from '../../components/menus/MenuDesktop'
-import { NAME_APP, TITLE_APP, SUBTITLE_APP } from '../../config'
+import Brand from '@/components/Brand'
+import CurrentUser from '@/components/CurrentUser'
+import MenuMobile from '@/components/molecules/menus/MenuMobile'
+import MenuDesktop from '@/components/molecules/menus/MenuDesktop'
+import { NAME_APP, TITLE_APP, SUBTITLE_APP } from '@/config'
 import Container from '@/components/ui/Container'
 
 const Header: FC = () => {

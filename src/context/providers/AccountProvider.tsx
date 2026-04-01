@@ -1,9 +1,9 @@
 import { useState, useEffect, type FC } from 'react'
 import { onAuthStateChanged, type User } from 'firebase/auth'
 import { toast } from 'react-toastify'
-import type { Children } from '../../types/inex'
-import { auth } from '../../apis/firebase'
-import AccountCtx from '../AccountCtx'
+import type { Children } from '@/types/inex'
+import { auth } from '@/apis/firebase'
+import AccountCtx from '@/context/AccountCtx'
 
 const AccountProvider: FC<Children> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null)

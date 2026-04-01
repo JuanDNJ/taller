@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import Container from './ui/Container'
+import Container from '@/components/ui/Container'
 
 type HeroProps = {
     children: React.ReactNode;

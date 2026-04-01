@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import AccountCtx from '../AccountCtx'
+import AccountCtx from '@/context/AccountCtx'
 export const useAccount = () => {
   const context = useContext(AccountCtx)
   if (!context) {

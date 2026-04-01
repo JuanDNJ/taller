@@ -1,6 +1,6 @@
 import type { FC } from 'react'
-import Container from '../ui/Container'
-import Title from '../Title'
+import Container from '@/components/ui/Container'
+import Title from '@/components/atoms/Title'
 import { ABOUT } from '@/config'
 import entorno from '@/assets/images/png/entorno_taller.png'
 import OkSvg from '@/components/ui/icons/OkSvg'

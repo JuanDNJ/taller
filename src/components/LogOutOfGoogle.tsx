@@ -1,4 +1,4 @@
-import { signOut } from '../services/account'
+import { signOut } from '@/services/account'
 import { FaSignOutAlt } from 'react-icons/fa'
 
 const LogOutOfGoogle = () => {

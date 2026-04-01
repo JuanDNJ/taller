@@ -1,6 +1,6 @@
 import { useState, type FC } from 'react'
 import { NavLink } from 'react-router'
-import { MENU_LINKS } from '../../config'
+import { MENU_LINKS } from '@/config'
 
 export type MenuProps = {
   variant?: 'mobile' | 'desktop'

@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { TAGS_SIZE, TITLE_SIZE } from '../config'
+import { TAGS_SIZE, TITLE_SIZE } from '@/config'
 
 type TitleProps = {
   label: string;

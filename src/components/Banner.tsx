@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import Title from './Title'
+import Title from '@/components/atoms/Title'
 
 type BannerProps = {
     label: string;

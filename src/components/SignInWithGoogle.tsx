@@ -1,4 +1,4 @@
-import { signInWithGoogle } from '../services/account'
+import { signInWithGoogle } from '@/services/account'
 import { FaGoogle } from 'react-icons/fa'
 
 const SignInWithGoogle = () => {

@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import Title from '../components/Title'
+import Title from '@/components/atoms/Title'
 import Template from '@/components/ui/Template'
 import Container from '@/components/ui/Container'
 

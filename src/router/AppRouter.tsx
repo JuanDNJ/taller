@@ -1,6 +1,6 @@
 import type { FC } from 'react'
-import GlobalProvider from '../context/providers/GloblaProvider'
-import AccountProvider from '../context/providers/AccountProvider'
+import GlobalProvider from '@/context/providers/GloblaProvider'
+import AccountProvider from '@/context/providers/AccountProvider'
 import { RouterProvider } from 'react-router'
 import { router } from '.'
 
