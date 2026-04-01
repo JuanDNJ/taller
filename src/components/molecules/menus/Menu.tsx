@@ -18,7 +18,7 @@ const Item: FC<ItemLink> = ({ path, label, title, onClick }) => {
   return (
     <NavLink
       to={path}
-      className={'hover:underline font-black text-link px-4 py-2'}
+      className={'hover:underline font-black text-link px-4 py-2 text-xl md:text-base'}
       onClick={onClick}
       title={title}
     >

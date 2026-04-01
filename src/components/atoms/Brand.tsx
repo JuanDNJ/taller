@@ -8,7 +8,7 @@ type BrandProps = {
 
 const Brand: FC<BrandProps> = ({ label, className }) => {
   return (
-    <NavLink to="/" className={`inline-flex items-center gap-2 text-xl sm:text-5xl font-black ${className}`}>
+    <NavLink to="/" className={`inline-flex items-center gap-2 text-2xl sm:text-5xl font-black ${className}`}>
       <img src="./logo/mstile-150x150.png" width={56} height={56} alt={label} /> {label}
     </NavLink>
   )
