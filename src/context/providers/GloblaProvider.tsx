@@ -4,11 +4,11 @@ import type { Children, Theme } from '@/types/inex'
 
 const STORAGE_KEY = 'theme'
 
-function getSystemTheme(): 'light' | 'dark' {
+function getSystemTheme (): 'light' | 'dark' {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
-function applyClass(resolved: 'light' | 'dark') {
+function applyClass (resolved: 'light' | 'dark') {
   document.documentElement.classList.toggle('dark', resolved === 'dark')
 }
 

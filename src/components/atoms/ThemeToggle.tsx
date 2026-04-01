@@ -6,7 +6,7 @@ import type { Theme } from '@/types/inex'
 const options: { value: Theme; icon: typeof FiSun; label: string }[] = [
   { value: 'light', icon: FiSun, label: 'Claro' },
   { value: 'dark', icon: FiMoon, label: 'Oscuro' },
-  { value: 'system', icon: FiMonitor, label: 'Sistema' },
+  { value: 'system', icon: FiMonitor, label: 'Sistema' }
 ]
 
 const ThemeToggle: FC = () => {
