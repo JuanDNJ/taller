@@ -12,11 +12,11 @@ interface TemplateProps {
 }
 
 const Template: FC<TemplateProps> = ({ children, container = 'default', tag = 'section', id, title, className, style }) => {
-    return (
+  return (
         <Container title={title} id={id} variant={container} tag={tag} className={`text-typography bg-main ${className}`} style={style}>
             {children}
         </Container>
-    )
+  )
 }
 
 export default Template

@@ -5,8 +5,8 @@ import Banner from '@/components/molecules/Banner'
 import Btn from '@/components/atoms/Btn'
 
 const ExperienceTemplate: FC<{ id?: string }> = ({ id = 'technicians' }) => {
-    const [idTmp] = useState<string>(id)
-    return (
+  const [idTmp] = useState<string>(id)
+  return (
         <Container id={`${idTmp}-container`}>
             <HeroTop className='py-8 md:p-22 text-center bg-gray-500/10 my-22'>
                 <div className='max-w-3xl mx-auto'>
@@ -25,7 +25,7 @@ const ExperienceTemplate: FC<{ id?: string }> = ({ id = 'technicians' }) => {
                 </div>
             </HeroTop>
         </Container>
-    )
+  )
 }
 
 export default ExperienceTemplate

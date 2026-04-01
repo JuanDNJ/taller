@@ -5,8 +5,8 @@ import Btn from '@/components/atoms/Btn'
 import Hero from '@/components/atoms/Hero'
 import { useState, type FC } from 'react'
 const Welcome: FC<{ id?: string }> = ({ id = 'technicians' }) => {
-    const [idTmp] = useState<string>(id)
-    return (
+  const [idTmp] = useState<string>(id)
+  return (
         <Hero id={`${idTmp}-hero`}>
             <img
                 srcSet={`${heroImage} 1x, ${heroImage} 2x`}
@@ -29,7 +29,7 @@ const Welcome: FC<{ id?: string }> = ({ id = 'technicians' }) => {
                 </section>
             </article>
         </Hero>
-    )
+  )
 }
 
 export default Welcome

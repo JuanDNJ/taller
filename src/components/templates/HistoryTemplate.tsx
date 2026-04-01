@@ -6,10 +6,10 @@ import { ABOUT } from '@/config'
 type LegacyProps = { label: string, description: string, icon?: string }
 
 const HistoryTemplate: FC<{ id?: string }> = ({ id = 'history' }) => {
-    const [idTmp] = useState<string>(id)
-    const [items] = useState<LegacyProps[]>(ABOUT.history.story_elements)
+  const [idTmp] = useState<string>(id)
+  const [items] = useState<LegacyProps[]>(ABOUT.history.story_elements)
 
-    return (
+  return (
         <Container id={`${idTmp}-container`}>
             <article className="my-11 xl:my-22">
                 <section className='md:grid md:grid-cols-2 gap-4'>
@@ -40,7 +40,7 @@ const HistoryTemplate: FC<{ id?: string }> = ({ id = 'history' }) => {
                 </section>
             </article>
         </Container>
-    )
+  )
 }
 
 export default HistoryTemplate

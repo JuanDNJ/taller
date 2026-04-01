@@ -10,10 +10,10 @@ import engineRepair from '@/assets/images/png/engine_repair.png'
 import Container from '../atoms/Container'
 import { useState, type FC } from 'react'
 
-const ServicesTemplate: FC<{id?:string}> = ({id = 'services'}) => {
-    const [idTmp] = useState<string>(id)
-    
-    return (
+const ServicesTemplate: FC<{id?:string}> = ({ id = 'services' }) => {
+  const [idTmp] = useState<string>(id)
+
+  return (
         <Container id={`${idTmp}-container`}>
             <article className="my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4" >
                 <Aside>
@@ -90,7 +90,7 @@ const ServicesTemplate: FC<{id?:string}> = ({id = 'services'}) => {
                 </section>
             </article >
         </Container>
-    )
+  )
 }
 
 export default ServicesTemplate

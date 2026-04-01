@@ -7,8 +7,8 @@ import OkSvg from '@/components/atoms/icons/OkSvg'
 import details from '@/assets/images/png/herramientas_de_alta_gama.png'
 
 const IstalationsTemplate: FC<{ id?: string }> = ({ id = 'installations' }) => {
-    const [idTmp] = useState<string>(id)
-    return (
+  const [idTmp] = useState<string>(id)
+  return (
         <Container id={`${idTmp}-container`}>
             <article className="flex flex-col mb-11 xl:mb-22 xl:grid xl:grid-flow-row xl:grid-cols-12 gap-4">
                 <section className="row-1 col-span-8 relative">
@@ -63,7 +63,7 @@ const IstalationsTemplate: FC<{ id?: string }> = ({ id = 'installations' }) => {
                 </div>
             </article>
         </Container>
-    )
+  )
 }
 
 export default IstalationsTemplate

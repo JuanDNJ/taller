@@ -3,8 +3,8 @@ import Container from '@/components/atoms/Container'
 import { OUR_TECHNICIANS } from '@/config'
 import Title from '@/components/atoms/Title'
 
-const TechniciansTemplate: FC<{id?:string}> = ({id = 'technicians'}) => {
-    const [idTmp] = useState<string>(id)
+const TechniciansTemplate: FC<{id?:string}> = ({ id = 'technicians' }) => {
+  const [idTmp] = useState<string>(id)
   return (
         <Container id={`${idTmp}-container`}>
             <article className='md:max-w-6xl'>
