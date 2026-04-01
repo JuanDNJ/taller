@@ -5,7 +5,7 @@ import Container from '@/components/atoms/Container'
 
 const ContactPage: FC = () => {
   return (
-    <Template id="contact" tag="main" container="full">
+    <Template id="contact-template" tag="main" container="full">
       <Container className='py-11'>
         <Title tag="h1" label="Contacto" className='text-4xl xl:text-5xl font-bold text-center mt-8' />
         <section className="mt-8">

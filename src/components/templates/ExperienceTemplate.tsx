@@ -1,12 +1,13 @@
-import type { FC } from 'react'
+import { useState, type FC } from 'react'
 import Container from '@/components/atoms/Container'
 import HeroTop from '@/components/molecules/HeroTop'
 import Banner from '@/components/molecules/Banner'
 import Btn from '@/components/atoms/Btn'
 
-const ExperienceTemplate: FC = () => {
-  return (
-        <Container id="experience">
+const ExperienceTemplate: FC<{ id?: string }> = ({ id = 'technicians' }) => {
+    const [idTmp] = useState<string>(id)
+    return (
+        <Container id={`${idTmp}-container`}>
             <HeroTop className='py-8 md:p-22 text-center bg-gray-500/10 my-22'>
                 <div className='max-w-3xl mx-auto'>
                     <Banner
@@ -24,7 +25,7 @@ const ExperienceTemplate: FC = () => {
                 </div>
             </HeroTop>
         </Container>
-  )
+    )
 }
 
 export default ExperienceTemplate

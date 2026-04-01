@@ -3,9 +3,11 @@ import TallerCloe from '@/components/atoms/TallerCloe'
 import { HERO_MOOK } from '@/config'
 import Btn from '@/components/atoms/Btn'
 import Hero from '@/components/atoms/Hero'
-const Welcome = () => {
-  return (
-        <Hero>
+import { useState, type FC } from 'react'
+const Welcome: FC<{ id?: string }> = ({ id = 'technicians' }) => {
+    const [idTmp] = useState<string>(id)
+    return (
+        <Hero id={`${idTmp}-hero`}>
             <img
                 srcSet={`${heroImage} 1x, ${heroImage} 2x`}
                 className="absolute top-0 left-0 w-full h-full object-cover"
@@ -27,7 +29,7 @@ const Welcome = () => {
                 </section>
             </article>
         </Hero>
-  )
+    )
 }
 
 export default Welcome

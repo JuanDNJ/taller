@@ -1,19 +1,21 @@
 import { FaTools } from 'react-icons/fa'
 import Aside from '@/components/atoms/Aside'
 import Title from '@/components/atoms/Title'
-import Template from '@/components/molecules/Template'
 import { SERVICE_MOOK } from '@/config'
 import generalMaintenance from '@/assets/images/png/general_maintenance.png'
 import { Link } from 'react-router'
 import { BsArrowRight } from 'react-icons/bs'
 import mp4Frenos from '@/assets/mp4/Generación_de_Video_Sistema_de_Frenos.mp4'
 import engineRepair from '@/assets/images/png/engine_repair.png'
+import Container from '../atoms/Container'
+import { useState, type FC } from 'react'
 
-const ServicesTemplate = () => {
-  return (
-        <Template id="services">
-            {/* services */}
-            <article className="my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4">
+const ServicesTemplate: FC<{id?:string}> = ({id = 'services'}) => {
+    const [idTmp] = useState<string>(id)
+    
+    return (
+        <Container id={`${idTmp}-container`}>
+            <article className="my-8 grid grid-flow-row auto-rows-max md:auto-rows-min gap-4" >
                 <Aside>
                     <Title size='lg' label={SERVICE_MOOK.title} tag="h2" />
                 </Aside>
@@ -86,9 +88,9 @@ const ServicesTemplate = () => {
                         />
                     </article>
                 </section>
-            </article>
-        </Template>
-  )
+            </article >
+        </Container>
+    )
 }
 
 export default ServicesTemplate

@@ -6,10 +6,10 @@ import Template from '@/components/molecules/Template'
 
 const App: FC = () => {
   return (
-    <Template container='full' id="home" tag="main">
-      <Welcome />
-      <ServicesTemplate />
-      <ItvTemplate />
+    <Template container='full' id="home-template" tag="main">
+      <Welcome id="welcome"/>
+      <ServicesTemplate id="services"/>
+      <ItvTemplate id="itv"/>
     </Template>
   )
 }

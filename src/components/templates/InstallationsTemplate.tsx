@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { useState, type FC } from 'react'
 import Container from '@/components/atoms/Container'
 import Title from '@/components/atoms/Title'
 import { ABOUT } from '@/config'
@@ -6,9 +6,10 @@ import entorno from '@/assets/images/png/entorno_taller.png'
 import OkSvg from '@/components/atoms/icons/OkSvg'
 import details from '@/assets/images/png/herramientas_de_alta_gama.png'
 
-const IstalationsTemplate: FC = () => {
-  return (
-        <Container id="installations">
+const IstalationsTemplate: FC<{ id?: string }> = ({ id = 'installations' }) => {
+    const [idTmp] = useState<string>(id)
+    return (
+        <Container id={`${idTmp}-container`}>
             <article className="flex flex-col mb-11 xl:mb-22 xl:grid xl:grid-flow-row xl:grid-cols-12 gap-4">
                 <section className="row-1 col-span-8 relative">
                     <div className='absolute bg-black w-full h-full' />
@@ -62,7 +63,7 @@ const IstalationsTemplate: FC = () => {
                 </div>
             </article>
         </Container>
-  )
+    )
 }
 
 export default IstalationsTemplate
