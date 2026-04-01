@@ -3,6 +3,7 @@ import Brand from '@/components/atoms/Brand'
 import CurrentUser from '@/components/molecules/CurrentUser'
 import MenuMobile from '@/components/molecules/menus/MenuMobile'
 import MenuDesktop from '@/components/molecules/menus/MenuDesktop'
+import ThemeToggle from '@/components/atoms/ThemeToggle'
 import { NAME_APP, TITLE_APP, SUBTITLE_APP } from '@/config'
 import Container from '@/components/atoms/Container'
 
@@ -16,7 +17,10 @@ const Header: FC = () => {
           </section>
           <MenuMobile />
           <MenuDesktop />
-          <CurrentUser />
+          <section className="flex items-center gap-2">
+            <ThemeToggle />
+            <CurrentUser />
+          </section>
         </section>
       </Container>
     </header>

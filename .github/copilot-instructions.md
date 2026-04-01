@@ -1,6 +1,6 @@
-# AGENT.md — Taller CLOE
+# Taller CLOE — Project Instructions
 
-Convenciones, estructura y reglas del proyecto para agentes de IA y desarrolladores. Todas las herramientas (Copilot, Claude, Cursor, Gemini CLI) deben respetar este documento.
+Proyecto React con Atomic Design. Lee este archivo antes de crear, mover o revisar cualquier componente, hook, contexto o ruta.
 
 ---
 
