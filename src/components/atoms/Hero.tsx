@@ -4,11 +4,12 @@ import Container from '@/components/atoms/Container'
 type HeroProps = {
     children: React.ReactNode;
     id?: string;
+    hfull?: boolean;
 }
 
-const Hero: FC<HeroProps> = ({ children, id }) => {
+const Hero: FC<HeroProps> = ({ children, id, hfull }) => {
   return (
-        <Container id={id} variant='full' className="relative h-screen" >
+        <Container id={id} variant='full' className={`relative ${hfull ? 'h-screen' : 'h-auto'}`} >
             {children}
         </Container>
   )

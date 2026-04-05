@@ -7,7 +7,7 @@ import { useState, type FC } from 'react'
 const Welcome: FC<{ id?: string }> = ({ id = 'technicians' }) => {
   const [idTmp] = useState<string>(id)
   return (
-        <Hero id={`${idTmp}-hero`}>
+        <Hero id={`${idTmp}-hero`} hfull>
             <img
                 srcSet={`${heroImage} 1x, ${heroImage} 2x`}
                 className="absolute top-0 left-0 w-full h-full object-cover"
