@@ -23,8 +23,8 @@ const ContactPage: FC = () => {
           />
 
           <section className='absolute bg-black/60 top-0 left-0 w-full h-full flex flex-col justify-center px-12'>
-            <Title tag="h1" label="Contáctanos" className='text-yellow-500 text-4xl xl:text-7xl font-bold lg:mt-8' />
-            <p className="text-4xl xl:text-7xl text-stone-100 max-w-3xl">
+            <Title tag="h1" label="Contáctanos" className='text-yellow-500 text-2xl md:text-4xl xl:text-7xl font-bold lg:mt-8' />
+            <p className="text-2xl md:text-4xl xl:text-7xl text-stone-100 max-w-3xl">
               Ingeniería de Precisión a tu Servicio
             </p>
           </section>
