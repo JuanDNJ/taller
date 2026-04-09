@@ -8,7 +8,7 @@ import { BiSend } from 'react-icons/bi'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa6'
 import { MdAccessTime } from 'react-icons/md'
-import { CONTACT } from '@/config'
+import ContactLocation from '@/components/atoms/ContactLocation'
 
 const ContactPage: FC = () => {
   return (
@@ -91,15 +91,7 @@ const ContactPage: FC = () => {
               </div>
               <span className="text-xl px-2">Lunes a Viernes: 9:00 AM - 6:00 PM</span>
             </div>
-            <div className="flex flex-col col-span-2">
-              <iframe
-                className="rounded-lg w-full xxs:h-64 md:h-64"
-                src={CONTACT.google_maps}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+            <ContactLocation />
           </section>
         </article>
       </Container>
