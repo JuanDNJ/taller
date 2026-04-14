@@ -10,6 +10,8 @@ const AboutPage = lazy(() => import('../pages/About.page'))
 const ServicesPage = lazy(() => import('../pages/Services.page'))
 const ContactPage = lazy(() => import('../pages/Contact.page'))
 const PageNotFound = lazy(() => import('../pages/PageNotFound.page'))
+const Signin = lazy(() => import('../pages/authorized/Signin.page'))
+const Signup = lazy(() => import('../pages/authorized/Signup.page'))
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ export const router = createBrowserRouter([
       {
         path: 'contact',
         element: <ContactPage />
+      },
+      {
+        path: 'signin',
+        element: <Signin />
+      },
+      {
+        path: 'signup',
+        element: <Signup />
       }
     ]
   },
@@ -41,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: '',
         element: <Account />
+      },
+      {
+        path: 'signin',
+        element: <Signin />
       }
     ]
   },

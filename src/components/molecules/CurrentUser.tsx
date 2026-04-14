@@ -3,7 +3,7 @@ import { useAccount } from '@/context/hooks/useAccount'
 import Avatar from '@/components/atoms/Avatar'
 import LogOutOfGoogle from '@/components/molecules/LogOutOfGoogle'
 // import SignInWithGoogle from '@/components/SignInWithGoogle'
-import { NavLink } from 'react-router'
+import { Link, NavLink } from 'react-router'
 import Btn from '@/components/atoms/Btn'
 
 const CurrentUser = () => {
@@ -41,7 +41,8 @@ const CurrentUser = () => {
         )}</>)}
       {!user && (<>
         {/* <SignInWithGoogle />  */} <div className="hidden md:flex md:gap-2">
-          <Btn className='border-transparent bg-gray-600 hover:bg-tertiary/80 py-1 px-3 text-white' label='Inicia Sesión' onClick={handleWorking} />
+          <Link to="/signin" className='inline-flex items-center border-transparent bg-gray-600 hover:bg-tertiary/80 py-1 px-3 text-white rounded-md' >Inicia Sesión</Link>
+          {/* <Btn className='border-transparent bg-gray-600 hover:bg-tertiary/80 py-1 px-3 text-white' label='Inicia Sesión' onClick={handleWorking} */}
           <Btn className='border-gray-600 bg-gray-50 hover:bg-gray-200 text-gray-800 py-1 px-3' label='Registrate' onClick={handleWorking} />
         </div>
         <div className="flex md:hidden">
